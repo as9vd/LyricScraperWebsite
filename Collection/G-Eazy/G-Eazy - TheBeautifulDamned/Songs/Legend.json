@@ -1,0 +1,814 @@
+{"Legend": [
+  {
+    "count": 3,
+    "word": "reason"
+  },
+  {
+    "count": 9,
+    "word": "been"
+  },
+  {
+    "count": 1,
+    "word": "bad"
+  },
+  {
+    "count": 4,
+    "word": "don't"
+  },
+  {
+    "count": 3,
+    "word": "legend"
+  },
+  {
+    "count": 1,
+    "word": "allowed"
+  },
+  {
+    "count": 19,
+    "word": "yeah"
+  },
+  {
+    "count": 1,
+    "word": "thinks"
+  },
+  {
+    "count": 6,
+    "word": "you"
+  },
+  {
+    "count": 6,
+    "word": "they"
+  },
+  {
+    "count": 1,
+    "word": "gotta"
+  },
+  {
+    "count": 1,
+    "word": "ah"
+  },
+  {
+    "count": 2,
+    "word": "want"
+  },
+  {
+    "count": 4,
+    "word": "then"
+  },
+  {
+    "count": 1,
+    "word": "am"
+  },
+  {
+    "count": 1,
+    "word": "booth"
+  },
+  {
+    "count": 2,
+    "word": "at"
+  },
+  {
+    "count": 1,
+    "word": "sober"
+  },
+  {
+    "count": 1,
+    "word": "thirty"
+  },
+  {
+    "count": 2,
+    "word": "be"
+  },
+  {
+    "count": 1,
+    "word": "cabin"
+  },
+  {
+    "count": 6,
+    "word": "bottle"
+  },
+  {
+    "count": 3,
+    "word": "sun"
+  },
+  {
+    "count": 1,
+    "word": "vomit"
+  },
+  {
+    "count": 3,
+    "word": "gold"
+  },
+  {
+    "count": 1,
+    "word": "remember"
+  },
+  {
+    "count": 1,
+    "word": "how"
+  },
+  {
+    "count": 1,
+    "word": "into"
+  },
+  {
+    "count": 1,
+    "word": "see"
+  },
+  {
+    "count": 6,
+    "word": "found"
+  },
+  {
+    "count": 1,
+    "word": "does"
+  },
+  {
+    "count": 5,
+    "word": "came"
+  },
+  {
+    "count": 3,
+    "word": "after"
+  },
+  {
+    "count": 1,
+    "word": "poser"
+  },
+  {
+    "count": 18,
+    "word": "a"
+  },
+  {
+    "count": 9,
+    "word": "think"
+  },
+  {
+    "count": 1,
+    "word": "yah"
+  },
+  {
+    "count": 13,
+    "word": "one"
+  },
+  {
+    "count": 49,
+    "word": "i"
+  },
+  {
+    "count": 1,
+    "word": "right"
+  },
+  {
+    "count": 1,
+    "word": "l"
+  },
+  {
+    "count": 1,
+    "word": "stealing"
+  },
+  {
+    "count": 3,
+    "word": "monster"
+  },
+  {
+    "count": 16,
+    "word": "the"
+  },
+  {
+    "count": 1,
+    "word": "call"
+  },
+  {
+    "count": 1,
+    "word": "pull"
+  },
+  {
+    "count": 1,
+    "word": "fly"
+  },
+  {
+    "count": 3,
+    "word": "gallon"
+  },
+  {
+    "count": 1,
+    "word": "lookin'"
+  },
+  {
+    "count": 4,
+    "word": "to"
+  },
+  {
+    "count": 1,
+    "word": "grab"
+  },
+  {
+    "count": 2,
+    "word": "did"
+  },
+  {
+    "count": 1,
+    "word": "but"
+  },
+  {
+    "count": 1,
+    "word": "chill"
+  },
+  {
+    "count": 1,
+    "word": "dennis"
+  },
+  {
+    "count": 5,
+    "word": "got"
+  },
+  {
+    "count": 2,
+    "word": "good"
+  },
+  {
+    "count": 3,
+    "word": "down"
+  },
+  {
+    "count": 1,
+    "word": "dr"
+  },
+  {
+    "count": 1,
+    "word": "they's"
+  },
+  {
+    "count": 1,
+    "word": "neighbors"
+  },
+  {
+    "count": 2,
+    "word": "woo"
+  },
+  {
+    "count": 3,
+    "word": "jet"
+  },
+  {
+    "count": 5,
+    "word": "up"
+  },
+  {
+    "count": 1,
+    "word": "tuck"
+  },
+  {
+    "count": 2,
+    "word": "faded"
+  },
+  {
+    "count": 1,
+    "word": "need"
+  },
+  {
+    "count": 1,
+    "word": "this"
+  },
+  {
+    "count": 1,
+    "word": "doubt"
+  },
+  {
+    "count": 1,
+    "word": "y'all"
+  },
+  {
+    "count": 1,
+    "word": "gone"
+  },
+  {
+    "count": 1,
+    "word": "volume"
+  },
+  {
+    "count": 3,
+    "word": "she"
+  },
+  {
+    "count": 3,
+    "word": "name"
+  },
+  {
+    "count": 3,
+    "word": "know"
+  },
+  {
+    "count": 1,
+    "word": "party"
+  },
+  {
+    "count": 1,
+    "word": "whiskey"
+  },
+  {
+    "count": 8,
+    "word": "some"
+  },
+  {
+    "count": 3,
+    "word": "young"
+  },
+  {
+    "count": 3,
+    "word": "needed"
+  },
+  {
+    "count": 1,
+    "word": "robbin'"
+  },
+  {
+    "count": 1,
+    "word": "back"
+  },
+  {
+    "count": 1,
+    "word": "complaining"
+  },
+  {
+    "count": 1,
+    "word": "bruh"
+  },
+  {
+    "count": 1,
+    "word": "house"
+  },
+  {
+    "count": 5,
+    "word": "we"
+  },
+  {
+    "count": 3,
+    "word": "bling"
+  },
+  {
+    "count": 2,
+    "word": "not"
+  },
+  {
+    "count": 1,
+    "word": "sorry"
+  },
+  {
+    "count": 1,
+    "word": "bite"
+  },
+  {
+    "count": 5,
+    "word": "you're"
+  },
+  {
+    "count": 1,
+    "word": "now"
+  },
+  {
+    "count": 7,
+    "word": "yee"
+  },
+  {
+    "count": 2,
+    "word": "he's"
+  },
+  {
+    "count": 12,
+    "word": "just"
+  },
+  {
+    "count": 1,
+    "word": "rodman"
+  },
+  {
+    "count": 1,
+    "word": "over"
+  },
+  {
+    "count": 1,
+    "word": "valium"
+  },
+  {
+    "count": 1,
+    "word": "vroom"
+  },
+  {
+    "count": 8,
+    "word": "go"
+  },
+  {
+    "count": 3,
+    "word": "was"
+  },
+  {
+    "count": 1,
+    "word": "dinner"
+  },
+  {
+    "count": 1,
+    "word": "room"
+  },
+  {
+    "count": 1,
+    "word": "lifestyle"
+  },
+  {
+    "count": 1,
+    "word": "with"
+  },
+  {
+    "count": 1,
+    "word": "muthafuckin'"
+  },
+  {
+    "count": 4,
+    "word": "what"
+  },
+  {
+    "count": 1,
+    "word": "there"
+  },
+  {
+    "count": 3,
+    "word": "ha"
+  },
+  {
+    "count": 3,
+    "word": "time"
+  },
+  {
+    "count": 4,
+    "word": "he"
+  },
+  {
+    "count": 4,
+    "word": "swear"
+  },
+  {
+    "count": 3,
+    "word": "medallion"
+  },
+  {
+    "count": 1,
+    "word": "hi"
+  },
+  {
+    "count": 2,
+    "word": "aight"
+  },
+  {
+    "count": 1,
+    "word": "when"
+  },
+  {
+    "count": 4,
+    "word": "put"
+  },
+  {
+    "count": 1,
+    "word": "problem"
+  },
+  {
+    "count": 3,
+    "word": "her"
+  },
+  {
+    "count": 1,
+    "word": "far"
+  },
+  {
+    "count": 3,
+    "word": "teeth"
+  },
+  {
+    "count": 2,
+    "word": "text"
+  },
+  {
+    "count": 1,
+    "word": "if"
+  },
+  {
+    "count": 2,
+    "word": "ii"
+  },
+  {
+    "count": 4,
+    "word": "in"
+  },
+  {
+    "count": 3,
+    "word": "drank"
+  },
+  {
+    "count": 1,
+    "word": "made"
+  },
+  {
+    "count": 1,
+    "word": "understand"
+  },
+  {
+    "count": 5,
+    "word": "is"
+  },
+  {
+    "count": 11,
+    "word": "it"
+  },
+  {
+    "count": 2,
+    "word": "wanna"
+  },
+  {
+    "count": 1,
+    "word": "testarossa"
+  },
+  {
+    "count": 1,
+    "word": "aladdin"
+  },
+  {
+    "count": 3,
+    "word": "favorite"
+  },
+  {
+    "count": 1,
+    "word": "linguine"
+  },
+  {
+    "count": 3,
+    "word": "fuck"
+  },
+  {
+    "count": 3,
+    "word": "i'm"
+  },
+  {
+    "count": 3,
+    "word": "out"
+  },
+  {
+    "count": 1,
+    "word": "mad"
+  },
+  {
+    "count": 1,
+    "word": "get"
+  },
+  {
+    "count": 1,
+    "word": "eat"
+  },
+  {
+    "count": 1,
+    "word": "she's"
+  },
+  {
+    "count": 3,
+    "word": "man"
+  },
+  {
+    "count": 1,
+    "word": "hyde"
+  },
+  {
+    "count": 1,
+    "word": "bought"
+  },
+  {
+    "count": 1,
+    "word": "juice"
+  },
+  {
+    "count": 7,
+    "word": "off"
+  },
+  {
+    "count": 2,
+    "word": "ain't"
+  },
+  {
+    "count": 1,
+    "word": "first"
+  },
+  {
+    "count": 1,
+    "word": "thousand"
+  },
+  {
+    "count": 1,
+    "word": "baddest"
+  },
+  {
+    "count": 3,
+    "word": "poppin'"
+  },
+  {
+    "count": 1,
+    "word": "bout"
+  },
+  {
+    "count": 1,
+    "word": "'97"
+  },
+  {
+    "count": 1,
+    "word": "main"
+  },
+  {
+    "count": 1,
+    "word": "jekyll"
+  },
+  {
+    "count": 3,
+    "word": "him"
+  },
+  {
+    "count": 3,
+    "word": "second"
+  },
+  {
+    "count": 6,
+    "word": "that"
+  },
+  {
+    "count": 1,
+    "word": "knocking"
+  },
+  {
+    "count": 1,
+    "word": "sixes"
+  },
+  {
+    "count": 3,
+    "word": "talent"
+  },
+  {
+    "count": 1,
+    "word": "beat"
+  },
+  {
+    "count": 3,
+    "word": "me"
+  },
+  {
+    "count": 3,
+    "word": "champagne"
+  },
+  {
+    "count": 2,
+    "word": "from"
+  },
+  {
+    "count": 3,
+    "word": "day"
+  },
+  {
+    "count": 1,
+    "word": "stressing"
+  },
+  {
+    "count": 2,
+    "word": "all"
+  },
+  {
+    "count": 1,
+    "word": "drinking"
+  },
+  {
+    "count": 3,
+    "word": "bitch"
+  },
+  {
+    "count": 7,
+    "word": "like"
+  },
+  {
+    "count": 1,
+    "word": "mr"
+  },
+  {
+    "count": 5,
+    "word": "it's"
+  },
+  {
+    "count": 1,
+    "word": "bottom"
+  },
+  {
+    "count": 13,
+    "word": "my"
+  },
+  {
+    "count": 1,
+    "word": "sent"
+  },
+  {
+    "count": 1,
+    "word": "rarely"
+  },
+  {
+    "count": 1,
+    "word": "swag"
+  },
+  {
+    "count": 3,
+    "word": "since"
+  },
+  {
+    "count": 2,
+    "word": "who"
+  },
+  {
+    "count": 1,
+    "word": "here"
+  },
+  {
+    "count": 1,
+    "word": "eeh"
+  },
+  {
+    "count": 3,
+    "word": "wildin'"
+  },
+  {
+    "count": 1,
+    "word": "fuckin'"
+  },
+  {
+    "count": 7,
+    "word": "around"
+  },
+  {
+    "count": 3,
+    "word": "boy"
+  },
+  {
+    "count": 12,
+    "word": "and"
+  },
+  {
+    "count": 3,
+    "word": "of"
+  },
+  {
+    "count": 8,
+    "word": "on"
+  },
+  {
+    "count": 1,
+    "word": "or"
+  },
+  {
+    "count": 1,
+    "word": "chance"
+  },
+  {
+    "count": 3,
+    "word": "album"
+  },
+  {
+    "count": 1,
+    "word": "spent"
+  },
+  {
+    "count": 1,
+    "word": "crowded"
+  },
+  {
+    "count": 3,
+    "word": "say"
+  },
+  {
+    "count": 1,
+    "word": "italian"
+  },
+  {
+    "count": 1,
+    "word": "oz"
+  },
+  {
+    "count": 1,
+    "word": "follow"
+  },
+  {
+    "count": 2,
+    "word": "really"
+  },
+  {
+    "count": 3,
+    "word": "until"
+  },
+  {
+    "count": 3,
+    "word": "wild"
+  },
+  {
+    "count": 1,
+    "word": "walk"
+  }
+]}
