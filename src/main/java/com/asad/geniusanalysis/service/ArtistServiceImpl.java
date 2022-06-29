@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.io.File;
+import java.util.Arrays;
 import java.util.List;
 
 @Service
@@ -38,5 +40,14 @@ public class ArtistServiceImpl implements ArtistService {
     @Override
     public List<Artist> getAllArtists() {
         return artistRepository.findAll();
+    }
+
+    @Override
+    public void addArtistsFromCollection() {
+        File dir = new File("Collection");
+
+        for (File file: dir.listFiles()) {
+            System.out.println(file.toString().split("\\\\")[1]);
+        }
     }
 }

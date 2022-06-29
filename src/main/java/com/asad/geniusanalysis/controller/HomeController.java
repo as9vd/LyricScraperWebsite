@@ -20,6 +20,9 @@ public class HomeController {
     @RequestMapping("/artistList")
     public String artistList(Model model) {
         model.addAttribute("artistList", artistService.getAllArtists());
+
+        artistService.addArtistsFromCollection();
+
         return "artistList.html";
     }
 
