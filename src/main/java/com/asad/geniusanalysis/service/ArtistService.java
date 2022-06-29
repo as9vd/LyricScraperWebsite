@@ -17,6 +17,8 @@ public interface ArtistService {
 
     List<Artist> getAllArtists();
 
+    Artist getByName(String name);
+
     void addArtistsFromCollection();
 
 }

@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -48,21 +49,37 @@ public class ArtistServiceImpl implements ArtistService {
     }
 
     @Override
+    public Artist getByName(String name) {
+        for (int i = 0; i < artistRepository.findAll().size(); i++) {
+            if (artistRepository.findAll().get(i).getName().equals(name)) {
+                return artistRepository.findAll().get(i);
+            }
+        }
+
+        return null;
+    }
+
+    @Override
     @Transactional
     public void addArtistsFromCollection() {
         File dir = new File("Collection");
 
+        ArrayList<String> artistsAdded = new ArrayList<>(); // Need this, because findByName doesn't work here, because this is a transactional method.
+
         for (File artistDir: dir.listFiles()) {
             String artistName = artistDir.toString().split("\\\\")[1];
 
-            if (!(findByName(artistName) == null)) {
+            if (!(getByName(artistName) == null)) { // e.g. if you refresh after the database sweeps through the Collection folder.
                 continue;
-            } else {
-                artistRepository.save(new Artist(artistName));
             }
 
-            for (File albumFolder: artistDir.listFiles()) {
-                for (File file: albumFolder.listFiles()) {
+            if (!(artistsAdded.contains(artistName))) {
+                artistRepository.save(new Artist(artistName));
+                artistsAdded.add(artistName);
+            }
+
+            for (File albumFolder: artistDir.listFiles()) { // e.g. Children of "Joey Bada$$"
+                for (File file: albumFolder.listFiles()) { // e.g. Children of "Joey Bada$$ - 1999"
                     if (file.toString().contains("Tracklist")) {
                         File tracklistFile = new File(file.getAbsolutePath());
 
@@ -70,7 +87,7 @@ public class ArtistServiceImpl implements ArtistService {
                             String line;
                             while ((line = br.readLine()) != null) { // Parsing the links bud!
                                 Song song = new Song(line);
-                                song.setArtist(new Artist(artistName));
+                                song.setArtist(getByName(artistName));
 
                                 songRepository.save(song);
                             }
@@ -82,9 +99,6 @@ public class ArtistServiceImpl implements ArtistService {
                     }
                 }
             }
-
-
-
         }
     }
 
