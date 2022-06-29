@@ -16,7 +16,7 @@ public class Song {
 
     @OneToOne(targetEntity = com.asad.geniusanalysis.entity.Artist.class, cascade = CascadeType.ALL)
     @JoinColumn(name = "artistID")
-    public int artistID;
+    public Artist artist;
 
     public Song() {}
 
@@ -24,10 +24,10 @@ public class Song {
         this.link = link;
     }
 
-    public Song(int id, String link, int artistID) {
+    public Song(int id, String link, Artist artist) {
         this.id = id;
         this.link = link;
-        this.artistID = artistID;
+        this.artist = artist;
     }
 
     public int getId() {
@@ -46,12 +46,12 @@ public class Song {
         this.link = link;
     }
 
-    public int getArtistID() {
-        return artistID;
+    public Artist getArtist() {
+        return artist;
     }
 
-    public void setArtistID(int artistID) {
-        this.artistID = artistID;
+    public void setArtist(Artist artist) {
+        this.artist = artist;
     }
 
     @Override
@@ -59,12 +59,12 @@ public class Song {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Song song = (Song) o;
-        return id == song.id && artistID == song.artistID && Objects.equals(link, song.link);
+        return id == song.id && Objects.equals(link, song.link) && Objects.equals(artist, song.artist);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, link, artistID);
+        return Objects.hash(id, link, artist);
     }
 
     @Override
@@ -72,7 +72,7 @@ public class Song {
         return "Song{" +
                 "id=" + id +
                 ", link='" + link + '\'' +
-                ", artistID=" + artistID +
+                ", artist=" + artist +
                 '}';
     }
 }

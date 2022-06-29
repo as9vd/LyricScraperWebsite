@@ -1,6 +1,5 @@
 package com.asad.geniusanalysis.controller;
 
-import com.asad.geniusanalysis.repository.ArtistRepository;
 import com.asad.geniusanalysis.service.ArtistServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

@@ -1,22 +1,26 @@
 package com.asad.geniusanalysis.service;
 
 import com.asad.geniusanalysis.entity.Artist;
+import com.asad.geniusanalysis.entity.Song;
 import com.asad.geniusanalysis.repository.ArtistRepository;
+import com.asad.geniusanalysis.repository.SongRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.io.File;
+import java.io.*;
 import java.util.List;
 import java.util.Optional;
 
 @Service
 public class ArtistServiceImpl implements ArtistService {
     private ArtistRepository artistRepository;
+    private SongRepository songRepository;
 
     @Autowired
-    public ArtistServiceImpl(ArtistRepository artistRepository) {
+    public ArtistServiceImpl(ArtistRepository artistRepository, SongRepository songRepository) {
         this.artistRepository = artistRepository;
+        this.songRepository = songRepository;
     }
 
     @Override
@@ -51,20 +55,36 @@ public class ArtistServiceImpl implements ArtistService {
         for (File artistDir: dir.listFiles()) {
             String artistName = artistDir.toString().split("\\\\")[1];
 
-            for (File albumFolder: artistDir.listFiles()) {
-                for (File file: albumFolder.listFiles()) {
-                    if (file.toString().contains("Tracklist")) {
-                        System.out.println(file.toString());
-                    }
-                }
-            }
-
-
             if (!(findByName(artistName) == null)) {
                 continue;
             } else {
                 artistRepository.save(new Artist(artistName));
             }
+
+            for (File albumFolder: artistDir.listFiles()) {
+                for (File file: albumFolder.listFiles()) {
+                    if (file.toString().contains("Tracklist")) {
+                        File tracklistFile = new File(file.getAbsolutePath());
+
+                        try (BufferedReader br = new BufferedReader(new FileReader(tracklistFile))) {
+                            String line;
+                            while ((line = br.readLine()) != null) { // Parsing the links bud!
+                                Song song = new Song(line);
+                                song.setArtist(new Artist(artistName));
+
+                                songRepository.save(song);
+                            }
+                        } catch (FileNotFoundException e) {
+                            e.printStackTrace();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+            }
+
+
+
         }
     }
 
