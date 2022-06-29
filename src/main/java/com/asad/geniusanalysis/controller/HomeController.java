@@ -16,13 +16,20 @@ public class HomeController {
         return "index.html";
     }
 
-    @RequestMapping("/artistList")
-    public String artistList(Model model) {
+    @RequestMapping("/loadArtists")
+    public String loadArtists(Model model) {
         model.addAttribute("artistList", artistService.getAllArtists());
 
         artistService.addArtistsFromCollection();
 
-        return "artistList.html";
+        return "loadArtists.html";
+    }
+
+    @RequestMapping("/search")
+    public String search(Model model) {
+        model.addAttribute("artistList", artistService.getAllArtists());
+
+        return "search.html";
     }
 
 }

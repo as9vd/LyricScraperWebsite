@@ -1,0 +1,2 @@
+ALTER TABLE artist_list_fk AUTO_INCREMENT = 1;
+ALTER TABLE song_links AUTO_INCREMENT = 1;

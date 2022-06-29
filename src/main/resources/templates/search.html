@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List of Artists</title>
+</head>
+<body>
+
+<h2>List of Artists</h2>
+
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="active" th:each="artist : ${artistList}" th:field="${artist}">
+                <td th:text="${artist.id}"></td>
+                <td th:text="${artist.name}"></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</body>
+</html>
