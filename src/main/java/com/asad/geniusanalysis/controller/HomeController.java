@@ -21,9 +21,7 @@ public class HomeController {
     public String artistList(Model model) {
         model.addAttribute("artistList", artistService.getAllArtists());
 
-//        artistService.addArtistsFromCollection();
-
-        System.out.println(artistService.getArtist(167));
+        artistService.addArtistsFromCollection();
 
         return "artistList.html";
     }

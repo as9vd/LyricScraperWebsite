@@ -48,8 +48,17 @@ public class ArtistServiceImpl implements ArtistService {
     public void addArtistsFromCollection() {
         File dir = new File("Collection");
 
-        for (File file: dir.listFiles()) {
-            String artistName = file.toString().split("\\\\")[1];
+        for (File artistDir: dir.listFiles()) {
+            String artistName = artistDir.toString().split("\\\\")[1];
+
+            for (File albumFolder: artistDir.listFiles()) {
+                for (File file: albumFolder.listFiles()) {
+                    if (file.toString().contains("Tracklist")) {
+                        System.out.println(file.toString());
+                    }
+                }
+            }
+
 
             if (!(findByName(artistName) == null)) {
                 continue;

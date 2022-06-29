@@ -1,14 +1,10 @@
 package com.asad.geniusanalysis.entity;
 
-import lombok.Data;
-import org.hibernate.annotations.Cascade;
-import org.hibernate.annotations.CascadeType;
-
 import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "artist_genius_list")
+@Table(name = "artist_list_fk")
 public class Artist {
     @Id
     @Column(name = "id")
