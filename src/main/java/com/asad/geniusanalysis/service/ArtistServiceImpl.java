@@ -7,8 +7,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.io.File;
-import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ArtistServiceImpl implements ArtistService {
@@ -27,27 +27,49 @@ public class ArtistServiceImpl implements ArtistService {
 
     @Override
     @Transactional
-    public Artist getArtist(int id) {
-        return artistRepository.getReferenceById((long) id);
+    public Optional<Artist> getArtist(int id) {
+        return artistRepository.findById(id);
     }
 
     @Override
     @Transactional
     public void deleteById(int id) {
-        artistRepository.deleteById((long) id);
+        artistRepository.deleteById(id);
     }
 
     @Override
+    @Transactional
     public List<Artist> getAllArtists() {
-        return artistRepository.findAll();
+        return (List<Artist>) artistRepository.findAll();
     }
 
     @Override
+    @Transactional
     public void addArtistsFromCollection() {
         File dir = new File("Collection");
 
         for (File file: dir.listFiles()) {
-            System.out.println(file.toString().split("\\\\")[1]);
+            String artistName = file.toString().split("\\\\")[1];
+
+            if (!(findByName(artistName) == null)) {
+                continue;
+            } else {
+                artistRepository.save(new Artist(artistName));
+            }
         }
     }
+
+    @Transactional
+    public Artist findByName(String name) {
+        for (int i = 0; i < artistRepository.findAll().size(); i++) {
+            if (artistRepository.findAll().get(i).getName().equals(name)) {
+                return artistRepository.findAll().get(i);
+            } else {
+                continue;
+            }
+        }
+
+        return null;
+    }
+
 }
