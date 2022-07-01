@@ -1,35 +1,12 @@
 package com.asad.geniusanalysis.controller;
 
-import com.asad.geniusanalysis.service.ArtistServiceImpl;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class HomeController {
-    @Autowired
-    public ArtistServiceImpl artistService;
-
     @RequestMapping("/")
-    public String index() {
+    public String returnHome() {
         return "index.html";
     }
-
-    @RequestMapping("/loadArtists")
-    public String loadArtists(Model model) {
-        model.addAttribute("artistList", artistService.getAllArtists());
-
-        artistService.addArtistsFromCollection();
-
-        return "loadArtists.html";
-    }
-
-    @RequestMapping("/search")
-    public String search(Model model) {
-        model.addAttribute("artistList", artistService.getAllArtists());
-
-        return "search.html";
-    }
-
 }
