@@ -1,0 +1,962 @@
+{"pickupthephone": [
+  {
+    "count": 3,
+    "word": "reason"
+  },
+  {
+    "count": 1,
+    "word": "thought"
+  },
+  {
+    "count": 1,
+    "word": "ring"
+  },
+  {
+    "count": 5,
+    "word": "don't"
+  },
+  {
+    "count": 3,
+    "word": "commit"
+  },
+  {
+    "count": 3,
+    "word": "bag"
+  },
+  {
+    "count": 28,
+    "word": "yeah"
+  },
+  {
+    "count": 5,
+    "word": "your"
+  },
+  {
+    "count": 1,
+    "word": "fucking"
+  },
+  {
+    "count": 1,
+    "word": "granny"
+  },
+  {
+    "count": 7,
+    "word": "pick"
+  },
+  {
+    "count": 1,
+    "word": "discriminize"
+  },
+  {
+    "count": 2,
+    "word": "mama"
+  },
+  {
+    "count": 2,
+    "word": "because"
+  },
+  {
+    "count": 2,
+    "word": "dough"
+  },
+  {
+    "count": 12,
+    "word": "you"
+  },
+  {
+    "count": 1,
+    "word": "livin'"
+  },
+  {
+    "count": 1,
+    "word": "brr"
+  },
+  {
+    "count": 5,
+    "word": "then"
+  },
+  {
+    "count": 1,
+    "word": "miller"
+  },
+  {
+    "count": 1,
+    "word": "left"
+  },
+  {
+    "count": 2,
+    "word": "callin'"
+  },
+  {
+    "count": 6,
+    "word": "be"
+  },
+  {
+    "count": 3,
+    "word": "roll"
+  },
+  {
+    "count": 1,
+    "word": "shootin'"
+  },
+  {
+    "count": 2,
+    "word": "believe"
+  },
+  {
+    "count": 1,
+    "word": "cute"
+  },
+  {
+    "count": 1,
+    "word": "eyes"
+  },
+  {
+    "count": 1,
+    "word": "uhuh"
+  },
+  {
+    "count": 1,
+    "word": "gon'"
+  },
+  {
+    "count": 4,
+    "word": "whoa"
+  },
+  {
+    "count": 1,
+    "word": "sonny"
+  },
+  {
+    "count": 1,
+    "word": "quavo"
+  },
+  {
+    "count": 1,
+    "word": "skrrt"
+  },
+  {
+    "count": 1,
+    "word": "scott"
+  },
+  {
+    "count": 2,
+    "word": "so"
+  },
+  {
+    "count": 1,
+    "word": "kids"
+  },
+  {
+    "count": 14,
+    "word": "a"
+  },
+  {
+    "count": 2,
+    "word": "middle"
+  },
+  {
+    "count": 2,
+    "word": "star"
+  },
+  {
+    "count": 1,
+    "word": "one"
+  },
+  {
+    "count": 42,
+    "word": "i"
+  },
+  {
+    "count": 1,
+    "word": "lottery"
+  },
+  {
+    "count": 2,
+    "word": "right"
+  },
+  {
+    "count": 2,
+    "word": "l"
+  },
+  {
+    "count": 2,
+    "word": "call"
+  },
+  {
+    "count": 27,
+    "word": "the"
+  },
+  {
+    "count": 4,
+    "word": "straight"
+  },
+  {
+    "count": 1,
+    "word": "reverend"
+  },
+  {
+    "count": 3,
+    "word": "blowin'"
+  },
+  {
+    "count": 3,
+    "word": "pull"
+  },
+  {
+    "count": 2,
+    "word": "shit"
+  },
+  {
+    "count": 1,
+    "word": "klondike"
+  },
+  {
+    "count": 6,
+    "word": "to"
+  },
+  {
+    "count": 2,
+    "word": "did"
+  },
+  {
+    "count": 1,
+    "word": "but"
+  },
+  {
+    "count": 1,
+    "word": "ass"
+  },
+  {
+    "count": 12,
+    "word": "ooh"
+  },
+  {
+    "count": 2,
+    "word": "had"
+  },
+  {
+    "count": 3,
+    "word": "ice"
+  },
+  {
+    "count": 4,
+    "word": "do"
+  },
+  {
+    "count": 5,
+    "word": "got"
+  },
+  {
+    "count": 3,
+    "word": "rollie"
+  },
+  {
+    "count": 2,
+    "word": "throwin'"
+  },
+  {
+    "count": 1,
+    "word": "uh"
+  },
+  {
+    "count": 4,
+    "word": "lit"
+  },
+  {
+    "count": 4,
+    "word": "woo"
+  },
+  {
+    "count": 2,
+    "word": "talk"
+  },
+  {
+    "count": 37,
+    "word": "up"
+  },
+  {
+    "count": 1,
+    "word": "need"
+  },
+  {
+    "count": 2,
+    "word": "this"
+  },
+  {
+    "count": 1,
+    "word": "pay"
+  },
+  {
+    "count": 2,
+    "word": "please"
+  },
+  {
+    "count": 1,
+    "word": "girl"
+  },
+  {
+    "count": 1,
+    "word": "gone"
+  },
+  {
+    "count": 6,
+    "word": "never"
+  },
+  {
+    "count": 3,
+    "word": "she"
+  },
+  {
+    "count": 1,
+    "word": "take"
+  },
+  {
+    "count": 1,
+    "word": "liston"
+  },
+  {
+    "count": 4,
+    "word": "know"
+  },
+  {
+    "count": 1,
+    "word": "sing"
+  },
+  {
+    "count": 15,
+    "word": "brrt"
+  },
+  {
+    "count": 1,
+    "word": "little"
+  },
+  {
+    "count": 1,
+    "word": "lucky"
+  },
+  {
+    "count": 4,
+    "word": "i'ma"
+  },
+  {
+    "count": 1,
+    "word": "young"
+  },
+  {
+    "count": 1,
+    "word": "show"
+  },
+  {
+    "count": 3,
+    "word": "for"
+  },
+  {
+    "count": 2,
+    "word": "back"
+  },
+  {
+    "count": 1,
+    "word": "we"
+  },
+  {
+    "count": 2,
+    "word": "life"
+  },
+  {
+    "count": 1,
+    "word": "anything"
+  },
+  {
+    "count": 1,
+    "word": "not"
+  },
+  {
+    "count": 4,
+    "word": "zoned"
+  },
+  {
+    "count": 1,
+    "word": "brightest"
+  },
+  {
+    "count": 5,
+    "word": "you're"
+  },
+  {
+    "count": 1,
+    "word": "now"
+  },
+  {
+    "count": 11,
+    "word": "just"
+  },
+  {
+    "count": 1,
+    "word": "every"
+  },
+  {
+    "count": 1,
+    "word": "percocet"
+  },
+  {
+    "count": 9,
+    "word": "pour"
+  },
+  {
+    "count": 2,
+    "word": "go"
+  },
+  {
+    "count": 3,
+    "word": "was"
+  },
+  {
+    "count": 1,
+    "word": "tuition"
+  },
+  {
+    "count": 3,
+    "word": "way"
+  },
+  {
+    "count": 6,
+    "word": "home"
+  },
+  {
+    "count": 1,
+    "word": "better"
+  },
+  {
+    "count": 1,
+    "word": "codeine"
+  },
+  {
+    "count": 7,
+    "word": "with"
+  },
+  {
+    "count": 1,
+    "word": "mouth"
+  },
+  {
+    "count": 1,
+    "word": "what"
+  },
+  {
+    "count": 22,
+    "word": "baby"
+  },
+  {
+    "count": 2,
+    "word": "ha"
+  },
+  {
+    "count": 1,
+    "word": "time"
+  },
+  {
+    "count": 4,
+    "word": "swear"
+  },
+  {
+    "count": 2,
+    "word": "play"
+  },
+  {
+    "count": 2,
+    "word": "told"
+  },
+  {
+    "count": 3,
+    "word": "ho"
+  },
+  {
+    "count": 1,
+    "word": "ya"
+  },
+  {
+    "count": 4,
+    "word": "poured"
+  },
+  {
+    "count": 1,
+    "word": "motherfucker"
+  },
+  {
+    "count": 1,
+    "word": "packin'"
+  },
+  {
+    "count": 1,
+    "word": "actavis"
+  },
+  {
+    "count": 1,
+    "word": "three"
+  },
+  {
+    "count": 1,
+    "word": "when"
+  },
+  {
+    "count": 1,
+    "word": "wrist"
+  },
+  {
+    "count": 1,
+    "word": "hell"
+  },
+  {
+    "count": 1,
+    "word": "rollup"
+  },
+  {
+    "count": 1,
+    "word": "'em"
+  },
+  {
+    "count": 5,
+    "word": "her"
+  },
+  {
+    "count": 1,
+    "word": "nah"
+  },
+  {
+    "count": 10,
+    "word": "four"
+  },
+  {
+    "count": 3,
+    "word": "block"
+  },
+  {
+    "count": 2,
+    "word": "hate"
+  },
+  {
+    "count": 1,
+    "word": "trap"
+  },
+  {
+    "count": 3,
+    "word": "hey"
+  },
+  {
+    "count": 3,
+    "word": "cash"
+  },
+  {
+    "count": 1,
+    "word": "preppin'"
+  },
+  {
+    "count": 1,
+    "word": "mcknight"
+  },
+  {
+    "count": 1,
+    "word": "if"
+  },
+  {
+    "count": 3,
+    "word": "treason"
+  },
+  {
+    "count": 2,
+    "word": "went"
+  },
+  {
+    "count": 13,
+    "word": "in"
+  },
+  {
+    "count": 1,
+    "word": "drank"
+  },
+  {
+    "count": 1,
+    "word": "is"
+  },
+  {
+    "count": 11,
+    "word": "it"
+  },
+  {
+    "count": 3,
+    "word": "mr2"
+  },
+  {
+    "count": 1,
+    "word": "hella"
+  },
+  {
+    "count": 1,
+    "word": "loving"
+  },
+  {
+    "count": 1,
+    "word": "ever"
+  },
+  {
+    "count": 3,
+    "word": "freezin'"
+  },
+  {
+    "count": 8,
+    "word": "phone"
+  },
+  {
+    "count": 1,
+    "word": "sister's"
+  },
+  {
+    "count": 1,
+    "word": "motherfuckin'"
+  },
+  {
+    "count": 2,
+    "word": "ayy"
+  },
+  {
+    "count": 1,
+    "word": "love"
+  },
+  {
+    "count": 3,
+    "word": "bleedin'"
+  },
+  {
+    "count": 1,
+    "word": "ostrich"
+  },
+  {
+    "count": 3,
+    "word": "fuck"
+  },
+  {
+    "count": 1,
+    "word": "birds"
+  },
+  {
+    "count": 21,
+    "word": "i'm"
+  },
+  {
+    "count": 5,
+    "word": "out"
+  },
+  {
+    "count": 1,
+    "word": "throwing"
+  },
+  {
+    "count": 1,
+    "word": "lean"
+  },
+  {
+    "count": 1,
+    "word": "too"
+  },
+  {
+    "count": 1,
+    "word": "get"
+  },
+  {
+    "count": 3,
+    "word": "man"
+  },
+  {
+    "count": 1,
+    "word": "power"
+  },
+  {
+    "count": 1,
+    "word": "skrrtskrrt"
+  },
+  {
+    "count": 1,
+    "word": "polar"
+  },
+  {
+    "count": 1,
+    "word": "benz"
+  },
+  {
+    "count": 1,
+    "word": "bought"
+  },
+  {
+    "count": 2,
+    "word": "off"
+  },
+  {
+    "count": 1,
+    "word": "nice"
+  },
+  {
+    "count": 2,
+    "word": "wrong"
+  },
+  {
+    "count": 3,
+    "word": "cheat"
+  },
+  {
+    "count": 2,
+    "word": "cline"
+  },
+  {
+    "count": 1,
+    "word": "screws"
+  },
+  {
+    "count": 1,
+    "word": "sanitize"
+  },
+  {
+    "count": 1,
+    "word": "tonight"
+  },
+  {
+    "count": 1,
+    "word": "draped"
+  },
+  {
+    "count": 1,
+    "word": "dice"
+  },
+  {
+    "count": 1,
+    "word": "feel"
+  },
+  {
+    "count": 1,
+    "word": "bigbody"
+  },
+  {
+    "count": 3,
+    "word": "hittin'"
+  },
+  {
+    "count": 1,
+    "word": "seats"
+  },
+  {
+    "count": 8,
+    "word": "that"
+  },
+  {
+    "count": 1,
+    "word": "hit"
+  },
+  {
+    "count": 1,
+    "word": "kiddin'"
+  },
+  {
+    "count": 1,
+    "word": "frog"
+  },
+  {
+    "count": 6,
+    "word": "zone"
+  },
+  {
+    "count": 1,
+    "word": "walkin'"
+  },
+  {
+    "count": 1,
+    "word": "should"
+  },
+  {
+    "count": 2,
+    "word": "me"
+  },
+  {
+    "count": 1,
+    "word": "only"
+  },
+  {
+    "count": 2,
+    "word": "pipe"
+  },
+  {
+    "count": 1,
+    "word": "bear"
+  },
+  {
+    "count": 1,
+    "word": "macaulay"
+  },
+  {
+    "count": 1,
+    "word": "brian"
+  },
+  {
+    "count": 6,
+    "word": "all"
+  },
+  {
+    "count": 1,
+    "word": "law"
+  },
+  {
+    "count": 1,
+    "word": "bitch"
+  },
+  {
+    "count": 20,
+    "word": "like"
+  },
+  {
+    "count": 5,
+    "word": "it's"
+  },
+  {
+    "count": 2,
+    "word": "real"
+  },
+  {
+    "count": 8,
+    "word": "my"
+  },
+  {
+    "count": 1,
+    "word": "twice"
+  },
+  {
+    "count": 1,
+    "word": "dream"
+  },
+  {
+    "count": 2,
+    "word": "races"
+  },
+  {
+    "count": 1,
+    "word": "pullin'"
+  },
+  {
+    "count": 1,
+    "word": "job"
+  },
+  {
+    "count": 1,
+    "word": "here"
+  },
+  {
+    "count": 6,
+    "word": "no"
+  },
+  {
+    "count": 2,
+    "word": "everybody"
+  },
+  {
+    "count": 1,
+    "word": "stacked"
+  },
+  {
+    "count": 1,
+    "word": "culkin"
+  },
+  {
+    "count": 1,
+    "word": "part"
+  },
+  {
+    "count": 1,
+    "word": "dumb"
+  },
+  {
+    "count": 1,
+    "word": "best"
+  },
+  {
+    "count": 1,
+    "word": "bowl"
+  },
+  {
+    "count": 1,
+    "word": "around"
+  },
+  {
+    "count": 1,
+    "word": "boy"
+  },
+  {
+    "count": 2,
+    "word": "alone"
+  },
+  {
+    "count": 12,
+    "word": "and"
+  },
+  {
+    "count": 4,
+    "word": "of"
+  },
+  {
+    "count": 1,
+    "word": "oh"
+  },
+  {
+    "count": 1,
+    "word": "nigga"
+  },
+  {
+    "count": 1,
+    "word": "make"
+  },
+  {
+    "count": 1,
+    "word": "fight"
+  },
+  {
+    "count": 13,
+    "word": "on"
+  },
+  {
+    "count": 2,
+    "word": "drinkin'"
+  },
+  {
+    "count": 3,
+    "word": "thugger"
+  },
+  {
+    "count": 6,
+    "word": "will"
+  },
+  {
+    "count": 1,
+    "word": "celibate"
+  },
+  {
+    "count": 1,
+    "word": "ow"
+  },
+  {
+    "count": 1,
+    "word": "clean"
+  },
+  {
+    "count": 1,
+    "word": "super"
+  },
+  {
+    "count": 2,
+    "word": "wan'"
+  },
+  {
+    "count": 1,
+    "word": "act'"
+  },
+  {
+    "count": 1,
+    "word": "travis"
+  }
+]}
