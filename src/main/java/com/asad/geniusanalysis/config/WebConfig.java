@@ -9,6 +9,4 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @ComponentScan("com.asad.geniusanalysis")
 public class WebConfig {
 
-
-
 }
