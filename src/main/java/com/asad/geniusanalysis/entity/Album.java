@@ -2,28 +2,26 @@ package com.asad.geniusanalysis.entity;
 
 import lombok.Data;
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
-@Table(name = "songs")
+@Table(name = "albums")
 @Data
-public class Song {
+public class Album {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public int id;
-
-    @Column(name = "link")
-    public String link;
+    int id;
 
     @Column(name = "title")
-    public String title;
+    String title;
 
     @ManyToOne(targetEntity = com.asad.geniusanalysis.entity.Artist.class, cascade = CascadeType.ALL)
     @JoinColumn(name = "artist_id")
-    public Artist artist;
+    Artist artist;
 
-    @ManyToOne(targetEntity = com.asad.geniusanalysis.entity.Album.class, cascade = CascadeType.ALL)
-    @JoinColumn(name = "album_id")
-    private Album album;
+    @OneToMany(mappedBy = "album", cascade = CascadeType.ALL)
+    List<Song> songs = new ArrayList<>();
 
 }
