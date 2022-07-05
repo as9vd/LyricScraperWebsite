@@ -1,4 +1,4 @@
-package com.asad.geniusanalysis.service;
+package com.asad.geniusanalysis.service.Song;
 
 import com.asad.geniusanalysis.entity.Song;
 

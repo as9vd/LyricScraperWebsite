@@ -28,4 +28,7 @@ public class Album {
         this.title = albumName;
     }
 
+    public Album() {
+
+    }
 }

@@ -1,4 +1,4 @@
-package com.asad.geniusanalysis.service;
+package com.asad.geniusanalysis.service.Artist;
 
 import com.asad.geniusanalysis.entity.Artist;
 import com.asad.geniusanalysis.repository.ArtistRepository;

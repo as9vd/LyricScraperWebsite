@@ -1,13 +1,14 @@
-package com.asad.geniusanalysis.service;
+package com.asad.geniusanalysis.service.Album;
 
 import com.asad.geniusanalysis.entity.Album;
-import com.asad.geniusanalysis.entity.Artist;
 import com.asad.geniusanalysis.repository.AlbumRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class AlbumServiceImpl implements AlbumService {
     private AlbumRepository albumRepository;
 

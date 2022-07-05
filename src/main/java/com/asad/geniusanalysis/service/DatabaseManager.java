@@ -3,6 +3,9 @@ package com.asad.geniusanalysis.service;
 import com.asad.geniusanalysis.entity.Album;
 import com.asad.geniusanalysis.entity.Artist;
 import com.asad.geniusanalysis.entity.Song;
+import com.asad.geniusanalysis.service.Album.AlbumServiceImpl;
+import com.asad.geniusanalysis.service.Artist.ArtistServiceImpl;
+import com.asad.geniusanalysis.service.Song.SongServiceImpl;
 import com.gargoylesoftware.htmlunit.BrowserVersion;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlElement;
@@ -18,11 +21,13 @@ import java.util.ArrayList;
 public class DatabaseManager {
     public ArtistServiceImpl artistService;
     public SongServiceImpl songService;
+    public AlbumServiceImpl albumService;
 
     @Autowired
-    public DatabaseManager(ArtistServiceImpl artistService, SongServiceImpl songService) {
+    public DatabaseManager(ArtistServiceImpl artistService, SongServiceImpl songService, AlbumServiceImpl albumService) {
         this.artistService = artistService;
         this.songService = songService;
+        this.albumService = albumService;
     }
 
     @Transactional
@@ -52,7 +57,6 @@ public class DatabaseManager {
                             String link;
                             String albumName;
                             String songName;
-                            boolean debounce = true;
 
                             final WebClient webClient = new WebClient(BrowserVersion.CHROME);
                             webClient.getOptions().setCssEnabled(false);
@@ -67,7 +71,8 @@ public class DatabaseManager {
                                 albumName = smallerAlbumCard.getFirstChild().getTextContent();
 
                                 final HtmlElement titleCard = page.getFirstByXPath("/html/body/div[1]/main/div[1]/div[3]/div/h1/span");
-                                songName = titleCard.getFirstChild().getTextContent();
+                                // Replacing weird quotes and ZeroWidthSpaces.
+                                songName = titleCard.getFirstChild().getTextContent().replace("’", "'").replaceAll("[\\p{Cf}]", "");
 
                                 Song song = new Song(songName, link);
                                 song.setArtist(artistService.getByName(artistName));
@@ -77,7 +82,10 @@ public class DatabaseManager {
 
                                 song.setAlbum(album);
 
+                                System.out.println(songName);
+
                                 songService.createSong(song);
+                                albumService.createAlbum(album);
                             }
                         } catch (FileNotFoundException e) {
                             e.printStackTrace();
@@ -90,4 +98,27 @@ public class DatabaseManager {
         }
     }
 
+    public ArtistServiceImpl getArtistService() {
+        return artistService;
+    }
+
+    public void setArtistService(ArtistServiceImpl artistService) {
+        this.artistService = artistService;
+    }
+
+    public SongServiceImpl getSongService() {
+        return songService;
+    }
+
+    public void setSongService(SongServiceImpl songService) {
+        this.songService = songService;
+    }
+
+    public AlbumServiceImpl getAlbumService() {
+        return albumService;
+    }
+
+    public void setAlbumService(AlbumServiceImpl albumService) {
+        this.albumService = albumService;
+    }
 }
