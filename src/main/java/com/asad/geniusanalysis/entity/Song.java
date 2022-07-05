@@ -26,4 +26,16 @@ public class Song {
     @JoinColumn(name = "album_id")
     private Album album;
 
+    public Song(String title) {
+        this.title = title;
+    }
+
+    public Song(String title, String link) {
+        this.title = title;
+        this.link = link;
+    }
+
+    public Song() {
+
+    }
 }

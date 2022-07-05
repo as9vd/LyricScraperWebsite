@@ -1,22 +1,20 @@
 package com.asad.geniusanalysis.service;
 
+import com.asad.geniusanalysis.entity.Album;
 import com.asad.geniusanalysis.entity.Artist;
 
 import java.util.List;
 import java.util.Optional;
 
-public interface ArtistService {
-    // C
-    void createArtist(Artist artist);
+public interface AlbumService {
+    void createAlbum(Album artist);
 
     // R
-    Optional<Artist> getArtist(int id);
+    Optional<Album> getAlbum(int id);
 
     // D
     void deleteById(int id);
 
-    List<Artist> getAllArtists();
-
-    Artist getByName(String name);
+    List<Album> getAllAlbums();
 
 }

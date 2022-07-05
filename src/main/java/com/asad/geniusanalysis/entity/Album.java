@@ -24,4 +24,8 @@ public class Album {
     @OneToMany(mappedBy = "album", cascade = CascadeType.ALL)
     List<Song> songs = new ArrayList<>();
 
+    public Album(String albumName) {
+        this.title = albumName;
+    }
+
 }

@@ -19,4 +19,11 @@ public class Artist {
     @OneToMany(mappedBy = "artist", cascade = CascadeType.ALL)
     List<Album> albums;
 
+    public Artist(String name) {
+        this.name = name;
+    }
+
+    public Artist() {
+
+    }
 }
