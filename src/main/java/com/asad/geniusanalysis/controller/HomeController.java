@@ -1,6 +1,6 @@
 package com.asad.geniusanalysis.controller;
 
-import com.asad.geniusanalysis.service.ArtistServiceImpl;
+import com.asad.geniusanalysis.service.DatabaseManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,27 +9,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class HomeController {
     @Autowired
-    public ArtistServiceImpl artistService;
+    public DatabaseManager databaseManager;
 
     @RequestMapping("/")
     public String index() {
         return "index.html";
     }
 
-    @RequestMapping("/loadArtists")
-    public String loadArtists(Model model) {
-        model.addAttribute("artistList", artistService.getAllArtists());
+    @RequestMapping("/loadDB")
+    public String loadDB(Model model) {
+        databaseManager.addFromCollection();
 
-        artistService.addArtistsFromCollection();
+        model.addAttribute("artistList", databaseManager.getArtistService().getAllArtists());
+        model.addAttribute("albumList", databaseManager.getAlbumService().getAllAlbums());
+        model.addAttribute("songList", databaseManager.getSongService().getAllSongs());
 
-        return "loadArtists.html";
-    }
-
-    @RequestMapping("/search")
-    public String search(Model model) {
-        model.addAttribute("artistList", artistService.getAllArtists());
-
-        return "search.html";
+        return "loadDB.html";
     }
 
 }

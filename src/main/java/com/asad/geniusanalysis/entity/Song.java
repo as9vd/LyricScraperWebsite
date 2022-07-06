@@ -1,10 +1,11 @@
 package com.asad.geniusanalysis.entity;
 
+import lombok.Data;
 import javax.persistence.*;
-import java.util.Objects;
 
 @Entity
-@Table(name = "song_links")
+@Table(name = "songs")
+@Data
 public class Song {
     @Id
     @Column(name = "id")
@@ -14,65 +15,27 @@ public class Song {
     @Column(name = "link")
     public String link;
 
-    @OneToOne(targetEntity = com.asad.geniusanalysis.entity.Artist.class, cascade = CascadeType.ALL)
-    @JoinColumn(name = "artistID")
+    @Column(name = "title")
+    public String title;
+
+    @ManyToOne(targetEntity = com.asad.geniusanalysis.entity.Artist.class, cascade = CascadeType.ALL)
+    @JoinColumn(name = "artist_id")
     public Artist artist;
 
-    public Song() {}
+    @ManyToOne(targetEntity = com.asad.geniusanalysis.entity.Album.class, cascade = CascadeType.ALL)
+    @JoinColumn(name = "album_id")
+    private Album album;
 
-    public Song(String link) {
+    public Song(String title) {
+        this.title = title;
+    }
+
+    public Song(String title, String link) {
+        this.title = title;
         this.link = link;
     }
 
-    public Song(int id, String link, Artist artist) {
-        this.id = id;
-        this.link = link;
-        this.artist = artist;
-    }
+    public Song() {
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getLink() {
-        return link;
-    }
-
-    public void setLink(String link) {
-        this.link = link;
-    }
-
-    public Artist getArtist() {
-        return artist;
-    }
-
-    public void setArtist(Artist artist) {
-        this.artist = artist;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Song song = (Song) o;
-        return id == song.id && Objects.equals(link, song.link) && Objects.equals(artist, song.artist);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, link, artist);
-    }
-
-    @Override
-    public String toString() {
-        return "Song{" +
-                "id=" + id +
-                ", link='" + link + '\'' +
-                ", artist=" + artist +
-                '}';
     }
 }

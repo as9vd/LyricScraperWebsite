@@ -1,18 +1,23 @@
 package com.asad.geniusanalysis.entity;
 
+import lombok.Data;
 import javax.persistence.*;
-import java.util.Objects;
+import java.util.List;
 
 @Entity
-@Table(name = "artist_list_fk")
+@Table(name = "artists")
+@Data
 public class Artist {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int id;
 
-    @Column(name = "stage_name")
+    @Column(name = "name")
     public String name;
+
+    @OneToMany(mappedBy = "artist", cascade = CascadeType.ALL)
+    List<Album> albums;
 
     public Artist(String name) {
         this.name = name;
@@ -20,42 +25,5 @@ public class Artist {
 
     public Artist() {
 
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @Override
-    public String toString() {
-        return "Artist{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Artist artist = (Artist) o;
-        return id == artist.id && Objects.equals(name, artist.name);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, name);
     }
 }

@@ -1,4 +1,4 @@
-package com.asad.geniusanalysis.service;
+package com.asad.geniusanalysis.service.Artist;
 
 import com.asad.geniusanalysis.entity.Artist;
 
@@ -18,7 +18,5 @@ public interface ArtistService {
     List<Artist> getAllArtists();
 
     Artist getByName(String name);
-
-    void addArtistsFromCollection();
 
 }

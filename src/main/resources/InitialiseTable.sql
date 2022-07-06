@@ -1,17 +1,27 @@
-CREATE TABLE  artist_list_fk (
-    id INT AUTO_INCREMENT,
-    stage_name CHAR(255),
-    
-    PRIMARY KEY (id)
+CREATE TABLE artists (
+                         id INT AUTO_INCREMENT NOT NULL,
+                         name CHAR(255) NOT NULL,
+
+                         PRIMARY KEY (id)
 );
 
-INSERT INTO artist_list_fk (stage_name) VALUES ("Drake"), ("Kendrick Lamar"), ("Rick Ross"), ("J. Cole"), ("The Weeknd"), ("Chief Keef");
+CREATE TABLE albums (
+                        id INT AUTO_INCREMENT NOT NULL,
+                        title CHAR(255) NOT NULL,
+                        artist_id INT NOT NULL,
 
-CREATE TABLE song_links (
-	id INT AUTO_INCREMENT,
-    link CHAR(255) NOT NULL,
-    artistID int NOT NULL,
-    
-    PRIMARY KEY (id),
-    FOREIGN KEY (artistID) REFERENCES artist_list_fk(id)
+                        PRIMARY KEY (id),
+                        FOREIGN KEY (artist_id) REFERENCES artists(id)
+);
+
+CREATE TABLE songs (
+                       id INT AUTO_INCREMENT NOT NULL,
+                       link CHAR(255) NOT NULL,
+                       title CHAR(225) NOT NULL,
+                       artist_id INT NOT NULL,
+                       album_id INT NOT NULL,
+
+                       PRIMARY KEY (id),
+                       FOREIGN KEY (artist_id) REFERENCES artists(id),
+                       FOREIGN KEY (album_id) REFERENCES albums(id)
 );
