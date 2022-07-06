@@ -27,4 +27,12 @@ public class HomeController {
         return "loadDB.html";
     }
 
+    @RequestMapping("/testDb")
+    public String testDb(Model model) {
+        System.out.println(databaseManager.getArtistService().getAllArtists());
+        model.addAttribute("21", databaseManager.getArtistService().getAllArtists().get(0));
+
+        return "testDb.html";
+    }
+
 }

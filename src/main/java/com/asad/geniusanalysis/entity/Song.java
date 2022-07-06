@@ -38,4 +38,13 @@ public class Song {
     public Song() {
 
     }
+
+    @Override
+    public String toString() {
+        return "Song{" +
+                "id=" + id +
+                ", link='" + link + '\'' +
+                ", title='" + title + '\'' +
+                '}';
+    }
 }
