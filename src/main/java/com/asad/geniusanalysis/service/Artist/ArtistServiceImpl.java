@@ -53,17 +53,4 @@ public class ArtistServiceImpl implements ArtistService {
         return null;
     }
 
-    @Transactional
-    public Artist findByName(String name) {
-        for (int i = 0; i < artistRepository.findAll().size(); i++) {
-            if (artistRepository.findAll().get(i).getName().equals(name)) {
-                return artistRepository.findAll().get(i);
-            } else {
-                continue;
-            }
-        }
-
-        return null;
-    }
-
 }

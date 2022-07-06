@@ -1,6 +1,7 @@
 package com.asad.geniusanalysis.service.Album;
 
 import com.asad.geniusanalysis.entity.Album;
+import com.asad.geniusanalysis.entity.Artist;
 import com.asad.geniusanalysis.repository.AlbumRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -36,4 +37,16 @@ public class AlbumServiceImpl implements AlbumService {
     public List<Album> getAllAlbums() {
         return albumRepository.findAll();
     }
+
+    @Override
+    public Album getByName(String name) {
+        for (int i = 0; i < albumRepository.findAll().size(); i++) {
+            if (albumRepository.findAll().get(i).getTitle().equals(name)) {
+                return albumRepository.findAll().get(i);
+            }
+        }
+
+        return null;
+    }
+
 }

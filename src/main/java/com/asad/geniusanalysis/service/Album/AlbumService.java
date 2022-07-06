@@ -17,4 +17,6 @@ public interface AlbumService {
 
     List<Album> getAllAlbums();
 
+    public Album getByName(String name);
+
 }

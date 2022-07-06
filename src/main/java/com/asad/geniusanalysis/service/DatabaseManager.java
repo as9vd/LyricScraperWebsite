@@ -35,6 +35,7 @@ public class DatabaseManager {
         File dir = new File("Collection");
 
         ArrayList<String> artistsAdded = new ArrayList<>(); // Need this, because findByName doesn't work here, because this is a transactional method.
+        ArrayList<String> albumsAdded = new ArrayList<>();
 
         for (File artistDir: dir.listFiles()) {
             String artistName = artistDir.toString().split("\\\\")[1];
@@ -77,15 +78,21 @@ public class DatabaseManager {
                                 Song song = new Song(songName, link);
                                 song.setArtist(artistService.getByName(artistName));
 
-                                Album album = new Album(albumName);
-                                album.setArtist(artistService.getByName(artistName));
+                                if (!(albumsAdded.contains(albumName))) {
+                                    Album album = new Album(albumName);
+                                    album.setArtist(artistService.getByName(artistName));
 
-                                song.setAlbum(album);
+                                    albumService.createAlbum(album);
+                                    albumsAdded.add(albumName);
+                                }
 
-                                System.out.println(songName);
+                                song.setAlbum(albumService.getByName(albumName));
+
+                                System.out.println(albumName + ": " + songName);
 
                                 songService.createSong(song);
-                                albumService.createAlbum(album);
+
+
                             }
                         } catch (FileNotFoundException e) {
                             e.printStackTrace();

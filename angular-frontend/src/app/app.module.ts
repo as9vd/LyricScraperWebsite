@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ArtistGrabberComponent } from './component/artist-grabber/artist-grabber.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from './component/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ArtistGrabberComponent
+    ArtistGrabberComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
