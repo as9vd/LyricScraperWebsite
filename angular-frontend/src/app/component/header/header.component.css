@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
+.container {
+    width: 100%;
+    margin: 0 0;
+}
+
+.main-header {
+    display: flex;
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+    background-color: #3e4e88;
+    height: 50px;
+}
+
+.main-header h2 {
+    order: 1;
+    font-weight: 500;  
+    width: 25%; 
+    display: flex;
+    justify-content: center;
+}
+
+.buttons {
+    order: 2;
+    display: flex;       
+    justify-content: left;
+    align-items: center;
+    width: 75%;
+    height: 75%;
+}
+
+.header-button {
+    border-radius: 20px;
+    border-width: thin;
+    background-color: white;
+    border-color: white;
+    font-size: 10px;
+    height: 75%;
+}
+
+.home-button {
+    
+}
+
+.generator-button {
+    
+}
+
+.questions-button {
+    justify-content: right;
+}

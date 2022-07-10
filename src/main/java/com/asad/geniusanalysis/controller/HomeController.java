@@ -29,8 +29,10 @@ public class HomeController {
 
     @RequestMapping("/testDb")
     public String testDb(Model model) {
-        System.out.println(databaseManager.getArtistService().getAllArtists());
-        model.addAttribute("21", databaseManager.getArtistService().getAllArtists().get(0));
+//        System.out.println(databaseManager.getArtistService().getAllArtists());
+        model.addAttribute("artistname", databaseManager.getArtistService().getAllArtists().get(2).getAlbums());
+
+        System.out.println(databaseManager.getSongService().getSong(194));
 
         return "testDb.html";
     }
