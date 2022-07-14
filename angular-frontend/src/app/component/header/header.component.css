@@ -1,59 +1,44 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "Inter", sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-size: 10px;
 }
 
 .container {
-    width: 100%;
-    margin: 0 0;
+    max-width: 100%;
+    width: 100vw;
+    height: 7.5vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #3B4252;
 }
 
 .main-header {
+    width: 40%;
     display: flex;
-    font-weight: 500;
     justify-content: center;
-    align-items: center;
+    font-size: 2.4rem;
     color: white;
-
-    background-color: #3e4e88;
-    height: 50px;
-}
-
-.main-header h2 {
-    order: 1;
-    font-weight: 500;  
-    width: 25%; 
-    display: flex;
-    justify-content: center;
+    padding-left: 10%;
 }
 
 .buttons {
-    order: 2;
-    display: flex;       
-    justify-content: left;
+    display: flex;
     align-items: center;
-    width: 75%;
-    height: 75%;
+    justify-content: right;
+    gap: 4.8rem;
+    width: 40%;
+    padding-right: 10%;
 }
 
 .header-button {
-    border-radius: 20px;
-    border-width: thin;
-    background-color: white;
-    border-color: white;
-    font-size: 10px;
-    height: 75%;
-}
-
-.home-button {
-    
-}
-
-.generator-button {
-    
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
 }
 
 .questions-button {
-    justify-content: right;
+    margin-right: 8.0rem;
 }
