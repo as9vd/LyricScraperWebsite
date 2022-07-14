@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { ArtistGrabberComponent } from './component/artist-grabber/artist-grabber.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './component/header/header.component';
+import { MainPageBodyComponent } from './component/main-page-body/main-page-body.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ArtistGrabberComponent,
-    HeaderComponent
+    HeaderComponent,
+    MainPageBodyComponent
   ],
   imports: [
     BrowserModule,
