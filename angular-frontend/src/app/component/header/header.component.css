@@ -5,6 +5,11 @@
     font-size: 10px;
 }
 
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
 .container {
     max-width: 100%;
     width: 100vw;
@@ -13,7 +18,29 @@
     justify-content: space-around;
     align-items: center;
     /* background-color: #3B4252; */
+    overflow: hidden;
+    position: relative;
 }
+/* 
+.container::before {
+    max-width: 100%;
+    width: 100vw;
+    height: 100vh;
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(rgba(0, 40, 56, 0.75), rgba(34, 34, 34, 0.75)), url("/assets/drakeWeeknd.jpg");
+    background-size: cover;
+    z-index: -1;
+    overflow: hidden;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
+/* 
+    filter: blur(12px);
+    transform: scale(1.1);
+    transition: all 0.5s;
+} */
 
 .title {
     color: #D8DEE9;
@@ -22,13 +49,23 @@
 }
 
 .background-pic {
+    position: absolute;
     width: 100%;
+    z-index: -1;
     height: 100%;
     background-image: linear-gradient(rgba(0, 40, 56, 0.75), rgba(34, 34, 34, 0.75)), url("/assets/drakeWeeknd.jpg");
     background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    filter: blur(12px);
+    transform: scale(1.1);
+}
+
+.title-text {
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 

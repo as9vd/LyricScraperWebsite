@@ -10,6 +10,7 @@ import { HeaderComponent } from './component/header/header.component';
 import { MainPageBodyComponent } from './component/main-page-body/main-page-body.component';
 import { AnalyserComponent } from './component/analyser/analyser.component';
 import { QuestionsComponent } from './component/questions/questions.component';
+import { SongScraperComponent } from './component/song-scraper/song-scraper.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { QuestionsComponent } from './component/questions/questions.component';
     HeaderComponent,
     MainPageBodyComponent,
     AnalyserComponent,
-    QuestionsComponent
+    QuestionsComponent,
+    SongScraperComponent
   ],
   imports: [
     BrowserModule,
