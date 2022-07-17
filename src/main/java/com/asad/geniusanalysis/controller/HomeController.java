@@ -1,10 +1,18 @@
 package com.asad.geniusanalysis.controller;
 
+import com.asad.geniusanalysis.Scraper;
 import com.asad.geniusanalysis.service.DatabaseManager;
+import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.io.File;
+import java.io.IOException;
 
 @Controller
 public class HomeController {
@@ -29,15 +37,7 @@ public class HomeController {
 
     @RequestMapping("/testDb")
     public String testDb(Model model) {
-//        System.out.println(databaseManager.getArtistService().getAllArtists());
-//        model.addAttribute("artistname", databaseManager.getArtistService().getAllArtists().get(2).getAlbums());
-
-//        int songCount = databaseManager.getSongService().getAllSongs().size();
-//
-//        for (int i = 0; i < songCount; i++) {
-//            System.out.println(databaseManager.getSongService().getAllSongs().get(i).artist.id);
-//        }
-
+        System.out.println("This is a page for debugging purposes.");
 
         return "testDb.html";
     }

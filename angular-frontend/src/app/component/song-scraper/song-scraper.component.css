@@ -68,10 +68,20 @@ mat-option {
     transform: rotate(5deg);
     cursor: pointer;
 }
- 
+
+.disable{
+    cursor: not-allowed;
+    pointer-events: none;
+ }
+
 .btn-word-count {
     color: #ECEFF4;
     background-color: #5E81AC;
+    
+}
+
+.btn-word-count:hover {
+    
 }
 
 .buttons button:hover {
