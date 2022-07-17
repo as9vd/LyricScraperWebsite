@@ -30,9 +30,14 @@ public class HomeController {
     @RequestMapping("/testDb")
     public String testDb(Model model) {
 //        System.out.println(databaseManager.getArtistService().getAllArtists());
-        model.addAttribute("artistname", databaseManager.getArtistService().getAllArtists().get(2).getAlbums());
+//        model.addAttribute("artistname", databaseManager.getArtistService().getAllArtists().get(2).getAlbums());
 
-        System.out.println(databaseManager.getSongService().getSong(194));
+//        int songCount = databaseManager.getSongService().getAllSongs().size();
+//
+//        for (int i = 0; i < songCount; i++) {
+//            System.out.println(databaseManager.getSongService().getAllSongs().get(i).artist.id);
+//        }
+
 
         return "testDb.html";
     }

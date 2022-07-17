@@ -1,3 +1,51 @@
-.test {
-    color: #D8DEE9;
+* {
+    margin: 0 0;
+    padding: 0;
+    font-size: 10px;
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    max-width: 100%;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    background-color: white;
+    color: black;
+    font-size: 1.2rem;
+    padding: 0.8rem 0.8rem;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 12px;
+    outline: none;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.25);
+}
+
+.linkInput {
+    padding: 5px;
+    border-radius: 5px;
+    /* border-color: white; */
+}
+
+::ng-deep mat-form-field {
+    font-size: 2.4rem;
+    color: white;
+    /* background-color: white; */
+}
+
+::ng-deep mat-autocomplete {
+
+}
+
+::ng-deep mat-option {
+
+}
+
+/* Dropdown options */
+::ng-deep .mat-option-text {
+    font-size: 1.2rem;
 }

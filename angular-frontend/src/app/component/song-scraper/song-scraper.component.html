@@ -1,3 +1,15 @@
 <div class="container">
-    
+    <form [formGroup]="inputForm" (ngSubmit)="onSubmit()">
+        <mat-form-field>
+            <mat-label>Song</mat-label>
+            <input formControlName="searchBar" placeholder="Search a song" type="text" aria-label="Song" matInput
+                [matAutocomplete]="auto" >
+
+            <mat-autocomplete #auto="matAutocomplete">
+                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                    {{option.link}}
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+    </form>
 </div>
