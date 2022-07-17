@@ -8,44 +8,33 @@
 .container {
     max-width: 100%;
     width: 90vw;
+    margin-top: -1.6rem;
+}
+
+form {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+}
+
+mat-form-field {
+    width: 75%;
+}
+
+mat-label {
+    color: white;
+    font-size: 1.2rem;
 }
 
 input {
+    color: #212121;
+    font-size: 1.6rem;
+    padding: 0.8rem;
     background-color: white;
-    color: black;
-    font-size: 1.2rem;
-    padding: 0.8rem 0.8rem;
-    box-sizing: border-box;
-    border: 0;
-    border-radius: 12px;
-    outline: none;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.25);
-}
-
-.linkInput {
-    padding: 5px;
     border-radius: 5px;
-    /* border-color: white; */
 }
 
-::ng-deep mat-form-field {
-    font-size: 2.4rem;
-    color: white;
-    /* background-color: white; */
-}
-
-::ng-deep mat-autocomplete {
-
-}
-
-::ng-deep mat-option {
-
-}
-
-/* Dropdown options */
-::ng-deep .mat-option-text {
+mat-option {
+    color: #212121;
     font-size: 1.2rem;
 }
