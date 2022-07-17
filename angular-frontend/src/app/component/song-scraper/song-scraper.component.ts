@@ -47,6 +47,10 @@ export class SongScraperComponent implements OnInit {
     return this.songList.filter(song => song.title.toLowerCase().includes(filterValue));
   }
 
+  displaySong(song: Song): string {
+    return song.title;
+  }
+
   onSubmit() {
 
   }
