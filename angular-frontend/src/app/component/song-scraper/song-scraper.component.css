@@ -74,14 +74,14 @@ input:focus {
     cursor: pointer;
 }
 
-.btn-word-count {
+.btn-text {
     color: #ECEFF4;
     background-color: #5E81AC;
     opacity: 0.35;
     position: relative;
 }
 
-.btn-word-count:before {
+.btn-text:before {
     content: 'Coming Soon!';
     display: inline-block;
     width: 55%;
@@ -92,14 +92,13 @@ input:focus {
     right: -27.5%;
     top: -5%;
     transform: rotate(45deg);
-    background-color: yellow;
+    background-color: #DEA01E;
     color: #212121;
     border-color: #212121;
     border-radius: 2px;
-    border-width: 10px;
 }
 
-.btn-word-count:hover>.btn-word-count:after {
+.btn-text:hover>.btn-text:after {
     background-color: #ECEFF4;
 }
 
@@ -134,13 +133,14 @@ input:focus {
 
 .enabled {
     visibility: visible;
+    margin-top: 2.4rem;
 }
 
 .btn-generated {
     width: 15%;
     height: 3.0rem;
     color: #ECEFF4;
-    background-color: #5E81AC;
+    background-color: #3D4756;
     transition: 0.25s all;
     font-size: 1.2rem;
     border-radius: 8px;
@@ -155,28 +155,7 @@ input:focus {
 }
 
 .btn-generated:active {
-    -webkit-animation: spin 4s linear infinite;
-    -moz-animation: spin 4s linear infinite;
-    animation: spin 4s linear infinite;
-}
-
-@-moz-keyframes spin {
-    100% {
-        -moz-transform: rotate(360deg);
-    }
-}
-
-@-webkit-keyframes spin {
-    100% {
-        -webkit-transform: rotate(360deg);
-    }
-}
-
-@keyframes spin {
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
+    animation: shake 0.5s;
 }
 
 @keyframes shake {
@@ -235,7 +214,7 @@ input:focus {
 
     25% {
         color: #3DD9B1;
-        transform: scale(2);
+        transform: scale(1.35);
         opacity: 1;
         text-shadow: 3px 10px 5px rgba(0, 0, 0, 0.5);
     }
@@ -281,9 +260,11 @@ input:focus {
 
 .btn-valid:focus {
     color: #212121;
+    transition-delay: 0.2s;
     background-color: #9CED8D;
 }  
 
 .btn-invalid:focus {
+    transition-delay: 0.2s;
     background-color: #C75F5A;
 }

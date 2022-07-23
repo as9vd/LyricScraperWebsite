@@ -30,7 +30,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     RouterModule.forRoot([
       {path: '', component: AnalyserComponent},
       {path: 'home', component: AnalyserComponent},
-      {path: 'popularSongs', component: QuestionsComponent},
+      {path: 'popularSongs', component: AnalyserComponent},
       {path: 'faq', component: QuestionsComponent},
     ]),
     AppRoutingModule,

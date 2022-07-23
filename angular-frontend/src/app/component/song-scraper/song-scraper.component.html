@@ -5,7 +5,7 @@
 
     <div class="buttons">
         <button class="btn-json" [ngClass]="validLink ? 'btn-valid' : 'btn-invalid'" (click)="onClick()">JSON</button>
-        <button class="btn-word-count">Word Count</button>
+        <button class="btn-text">Text</button>
     </div>
 
     <div [ngClass]="jsonButtonPressed ? 'enabled' : 'disabled'">
@@ -15,7 +15,10 @@
         </div>
 
         <div [ngClass]="validLink == false ? 'download-section' : 'disabled'">
-            <p class="unsuccessful-generate pop-outin">Sorry pal, there was an error.</p>
+            <p class="unsuccessful-generate pop-outin">
+                Sorry pal, there was an error. 
+                Check if the link you put in is valid, or if the lyrics are of appropriate format. For more information, check the FAQ.
+            </p>
         </div>
     </div>
 </div>
