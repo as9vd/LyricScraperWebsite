@@ -28,9 +28,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
   imports: [
     BrowserModule,
     RouterModule.forRoot([
-      {path: '', component: HeaderComponent},
-      {path: 'analyser', component: AnalyserComponent},
-      {path: 'questions', component: QuestionsComponent},
+      {path: '', component: AnalyserComponent},
+      {path: 'home', component: AnalyserComponent},
+      {path: 'popularSongs', component: QuestionsComponent},
+      {path: 'faq', component: QuestionsComponent},
     ]),
     AppRoutingModule,
     MatAutocompleteModule,

@@ -11,6 +11,8 @@ export class SongService {
   private baseUrl = 'http://localhost:8080/api/songs?size=10000';
   public songList: Song[] = [];
 
+  public currentPath: string;
+
   constructor(@Inject(HttpClient) private httpClient: HttpClient) {}
 
   getSong(songID: number): Observable<Song> {
@@ -19,18 +21,17 @@ export class SongService {
     return this.httpClient.get<Song>(songUrl);
   } 
 
-  // This is weird. It returns the JSON, and a 200 status code, but it still says error. Weird. One to look at in the future.
-  getSongJSON(link: string) {
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json'
-      }),
-      responseType: 'text'
-    };
-    
+  async getSongJSON(link: string) {    
     let relevantSnippet = link.split("genius.com/")[1];
 
-    return this.httpClient.get("http://localhost:8080/persistLink/" + relevantSnippet).subscribe();
+    var path = "";
+
+    // The responseType helped change the JSON parse error.
+    let data = await this.httpClient.get("http://localhost:8080/persistLink/" + relevantSnippet, {responseType: 'text'}).toPromise().then(
+      
+    );
+
+    return await '../../../../../' + data?.replace(/\\/g, "/");
   }
 
   getSongList(): Observable<Song[]> {

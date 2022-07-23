@@ -7,4 +7,15 @@
         <button class="btn-json" (click)="onClick()">JSON</button>
         <button class="btn-word-count">Word Count</button>
     </div>
+
+    <div [ngClass]="jsonButtonPressed ? 'enabled' : 'disabled'">
+        <div [ngClass]="validLink ? 'download-section' : 'disabled'">
+            <p class="successful-generate">JSON successfully generated!</p>
+            <button class="btn-generated">Download</button>
+        </div>
+
+        <div [ngClass]="validLink == false ? 'download-section' : 'disabled'">
+            <p class="unsuccessful-generate">Sorry pal, there was an error.</p>
+        </div>
+    </div>
 </div>

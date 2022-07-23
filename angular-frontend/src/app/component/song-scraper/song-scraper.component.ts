@@ -16,7 +16,10 @@ export class SongScraperComponent implements OnInit {
   public inputForm!: FormGroup;
   public filteredOptions: Observable<Song[]>;
 
-  inputLink: string;
+  public inputLink: string;
+  public validLink: boolean = true;
+
+  public jsonButtonPressed: boolean;
 
   constructor(@Inject(ArtistService) private artistService: ArtistService,
               @Inject(SongService) private songService: SongService,
@@ -42,9 +45,23 @@ export class SongScraperComponent implements OnInit {
     );
   }
 
-  onClick() {
-    // console.log(this.inputLink);
-    this.songService.getSongJSON(this.inputLink);
+  // What we want: return a file/path to a file.
+  async onClick() {
+    this.jsonButtonPressed = true;
+
+    try {
+      let path = this.songService.getSongJSON(this.inputLink);
+
+      await path.then(
+        value => {return value}
+      );
+
+      this.validLink = true;
+    } catch (exception) {
+      this.validLink = false;
+    } finally {
+      await console.log("Was that a valid link? " + this.validLink)
+    }
   }
 
   private _filter(name: string): Song[] {
@@ -59,6 +76,12 @@ export class SongScraperComponent implements OnInit {
 
   onSubmit() {
 
+  }
+
+  testOnClick() {
+    this.validLink = !this.validLink;
+
+    console.log(this.validLink);
   }
 
 }

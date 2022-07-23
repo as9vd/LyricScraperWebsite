@@ -34,9 +34,10 @@ public class ListRestController {
             throw new RuntimeException(e);
         }
 
-        new File("temp/" + title + ".json");
+        File file = new File("temp/" + title + ".json");
 
-        return new ResponseEntity<String>("Added successfully.", HttpStatus.OK);
+        // This is the source of the unexpected JSON error. Weird thing with the strings.
+        return new ResponseEntity<String>(file.getPath(), HttpStatus.OK);
     }
 
 }
