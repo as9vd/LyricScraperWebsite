@@ -190,7 +190,7 @@ public class Scraper {
         }
     }
 
-    public static void createSongJSON(String link, String path) throws IOException, JSONException {
+    public static String createSongJSON(String link, String path) throws IOException, JSONException {
         ArrayList<String> wordsUsed = new ArrayList<>();
         HashMap<String, Integer> wordsUsedCounter = new HashMap<>();
         Document doc = Jsoup.connect(link).userAgent("Chrome").get();
@@ -257,6 +257,8 @@ public class Scraper {
         try (PrintWriter out = new PrintWriter(path + "/" + title + ".json")) {
             out.println(butterflyEffect.toString(2));
         }
+
+        return title;
     }
 
     public static String createAlbumJSON(String link) throws IOException, JSONException { // Used STARGAZING to prove the accuracy of this.

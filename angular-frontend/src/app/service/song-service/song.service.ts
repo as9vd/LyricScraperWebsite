@@ -9,7 +9,6 @@ import { Song } from 'src/app/common/song/song';
 })
 export class SongService {
   private baseUrl = 'http://localhost:8080/api/songs?size=10000';
-
   public songList: Song[] = [];
 
   constructor(@Inject(HttpClient) private httpClient: HttpClient) {}
@@ -19,6 +18,13 @@ export class SongService {
 
     return this.httpClient.get<Song>(songUrl);
   } 
+
+  getSongJSON(link: string) {
+    const headers = { 'content-type': 'application/json'}  
+    let relevantSnippet = link.split("genius.com/")[1];
+
+    return this.httpClient.post("http://localhost:8080/persistLink/" + relevantSnippet, {}, {"headers": headers});
+  }
 
   getSongList(): Observable<Song[]> {
     return this.httpClient.get<GetResponseSongs>(this.baseUrl).pipe(

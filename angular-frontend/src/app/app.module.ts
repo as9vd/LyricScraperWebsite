@@ -8,7 +8,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ArtistGrabberComponent } from './component/artist-grabber/artist-grabber.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './component/header/header.component';
 import { MainPageBodyComponent } from './component/main-page-body/main-page-body.component';
@@ -20,7 +19,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 @NgModule({
   declarations: [
     AppComponent,
-    ArtistGrabberComponent,
     HeaderComponent,
     MainPageBodyComponent,
     AnalyserComponent,

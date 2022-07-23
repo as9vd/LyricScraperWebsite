@@ -17,6 +17,8 @@ export class SongScraperComponent implements OnInit {
   public inputForm!: FormGroup;
   public filteredOptions: Observable<Song[]>;
 
+  inputLink: string;
+
   constructor(@Inject(ArtistService) private artistService: ArtistService,
               @Inject(SongService) private songService: SongService,
               @Inject(FormBuilder) private formBuilder: FormBuilder) {}
@@ -39,6 +41,11 @@ export class SongScraperComponent implements OnInit {
         return name ? this._filter(name as string) : this.songList.slice();
       }),
     );
+  }
+
+  onClick() {
+    console.log(this.inputLink);
+    this.songService.getSongJSON(this.inputLink);
   }
 
   private _filter(name: string): Song[] {

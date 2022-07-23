@@ -1,18 +1,28 @@
 <div class="container">
     <form class="form" [formGroup]="inputForm" (ngSubmit)="onSubmit()">
         <mat-form-field>
-            <input formControlName="searchBar" type="text" matInput [matAutocomplete]="auto">
+            <!-- Issue here. Only keeps the typed in text as variable, so if you select an option from the dropdown, that's not tracked. -->
+            <input 
+                #fieldInput
+                (input)="inputLink=(fieldInput.value)"
+                formControlName="searchBar" 
+                type="text" 
+                matInput 
+                [matAutocomplete]="auto"
+            >
 
             <mat-autocomplete #auto="matAutocomplete" [displayWith]="displaySong">
                 <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
                     {{option.link}}
                 </mat-option>
             </mat-autocomplete>
+
+            
         </mat-form-field>
     </form>
 
     <div class="buttons">
-        <button class="btn-json">JSON</button>
-        <button class="btn-word-count disable">Word Count</button>
+        <button class="btn-json" (click)="onClick()">JSON</button>
+        <button class="btn-word-count">Word Count</button>
     </div>
 </div>
