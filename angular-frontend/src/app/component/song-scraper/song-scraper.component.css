@@ -54,8 +54,8 @@ input:focus {
 
 .buttons button:focus {
     animation: shake 0.5s;
-    animation-iteration-count: 6;
-    background-color: #00BFC8;
+    animation-iteration-count: 4;
+    /* background-color: #00BFC8; */
 }
 
 .buttons button:active {
@@ -99,12 +99,12 @@ input:focus {
     border-width: 10px;
 }
 
-.btn-word-count:hover > .btn-word-count:after {
+.btn-word-count:hover>.btn-word-count:after {
     background-color: #ECEFF4;
 }
 
 .buttons button:hover {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 .download-section {
@@ -120,7 +120,8 @@ input:focus {
     transition-delay: 2s;
 }
 
-.successful-generate, .unsuccessful-generate {
+.successful-generate,
+.unsuccessful-generate {
     color: white;
     margin: 0 auto;
     font-size: 1.2rem;
@@ -154,34 +155,135 @@ input:focus {
 }
 
 .btn-generated:active {
-    -webkit-animation:spin 4s linear infinite;
-    -moz-animation:spin 4s linear infinite;
-    animation:spin 4s linear infinite;
+    -webkit-animation: spin 4s linear infinite;
+    -moz-animation: spin 4s linear infinite;
+    animation: spin 4s linear infinite;
 }
 
-@-moz-keyframes spin { 
-    100% { -moz-transform: rotate(360deg); } 
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
 }
-@-webkit-keyframes spin { 
-    100% { -webkit-transform: rotate(360deg); } 
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
 }
-@keyframes spin { 
-    100% { 
-        -webkit-transform: rotate(360deg); 
-        transform:rotate(360deg); 
-    } 
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes shake {
-    0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -2px) rotate(-1deg); }
-    20% { transform: translate(-3px, 0px) rotate(1deg); }
-    30% { transform: translate(3px, 2px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(1deg); }
-    50% { transform: translate(-1px, 2px) rotate(-1deg); }
-    60% { transform: translate(-3px, 1px) rotate(0deg); }
-    70% { transform: translate(3px, 1px) rotate(-1deg); }
-    80% { transform: translate(-1px, -1px) rotate(1deg); }
-    90% { transform: translate(1px, 2px) rotate(0deg); }
-    100% { transform: translate(1px, -2px) rotate(-1deg); }
-  }
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+@keyframes anim-popoutin {
+    0% {
+        color: #ECEFF4;
+        transform: scale(0);
+        opacity: 0;
+        text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+
+    25% {
+        color: #3DD9B1;
+        transform: scale(2);
+        opacity: 1;
+        text-shadow: 3px 10px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    50% {
+        color: #ECEFF4;
+        transform: scale(1);
+        opacity: 1;
+        text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        /* animate nothing to add pause at the end of animation */
+        transform: scale(1);
+        opacity: 1;
+        text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+    }
+}
+
+.fromtop {
+    animation: 2s anim-fromtop linear infinite;
+}
+
+@keyframes anim-fromtop {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    25% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+
+    50% {}
+
+    100% {}
+}
+
+.pop-outin {
+    animation: 2s anim-popoutin ease 1;
+}
+
+.btn-valid:focus {
+    color: #212121;
+    background-color: #9CED8D;
+}  
+
+.btn-invalid:focus {
+    background-color: #C75F5A;
+}

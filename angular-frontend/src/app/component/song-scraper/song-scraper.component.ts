@@ -17,7 +17,7 @@ export class SongScraperComponent implements OnInit {
   public filteredOptions: Observable<Song[]>;
 
   public inputLink: string;
-  public validLink: boolean = true;
+  public validLink: boolean;
 
   public jsonButtonPressed: boolean;
 
