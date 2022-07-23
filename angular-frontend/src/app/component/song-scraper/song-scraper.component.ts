@@ -12,7 +12,6 @@ import { SongService } from 'src/app/service/song-service/song.service';
   styleUrls: ['./song-scraper.component.css']
 })
 export class SongScraperComponent implements OnInit {
-  // public artistList: Artist[] = [];
   public songList: Song[] = [];
   public inputForm!: FormGroup;
   public filteredOptions: Observable<Song[]>;
@@ -44,7 +43,7 @@ export class SongScraperComponent implements OnInit {
   }
 
   onClick() {
-    console.log(this.inputLink);
+    // console.log(this.inputLink);
     this.songService.getSongJSON(this.inputLink);
   }
 

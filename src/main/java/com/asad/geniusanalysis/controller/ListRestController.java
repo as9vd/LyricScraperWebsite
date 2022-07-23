@@ -18,7 +18,7 @@ public class ListRestController {
     public DatabaseManager databaseManager;
 
     // localhost:8080/persistLink[...]
-    @RequestMapping(path = "/persistLink/{link}", method = RequestMethod.POST)
+    @RequestMapping(path = "/persistLink/{link}", method = RequestMethod.GET)
     public ResponseEntity<String> test(@PathVariable String link) {
         String baseUrl = "https://genius.com/";
 
