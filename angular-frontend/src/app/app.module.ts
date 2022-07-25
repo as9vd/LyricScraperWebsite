@@ -15,6 +15,7 @@ import { AnalyserComponent } from './component/analyser/analyser.component';
 import { QuestionsComponent } from './component/questions/questions.component';
 import { SongScraperComponent } from './component/song-scraper/song-scraper.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { FilesComponent } from './component/files/files.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MainPageBodyComponent,
     AnalyserComponent,
     QuestionsComponent,
-    SongScraperComponent
+    SongScraperComponent,
+    FilesComponent
   ],
   imports: [
     BrowserModule,
