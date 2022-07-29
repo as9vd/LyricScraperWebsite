@@ -6,28 +6,23 @@ import { DownloadService } from 'src/app/service/download-service/download.servi
 @Component({
   selector: 'app-files',
   templateUrl: './files.component.html',
-  styleUrls: ['./files.component.css']
+  styleUrls: ['./files.component.css'],
 })
 export class FilesComponent implements OnInit {
-
   fileList?: FileData[];
 
-  constructor(private downloadService: DownloadService) { }
+  constructor(private downloadService: DownloadService) {}
 
-  ngOnInit(): void {
-    this.getFileList();
+  ngOnInit(): void {}
+
+  public downloadFile(): void {
+    this.downloadService.download().subscribe((response) => {
+      let fileName = response.headers.get('Content-Disposition');
+      let blob: Blob = response.body as Blob;
+      let a = document.createElement('a');
+      a.download = 'song.json';
+      a.href = window.URL.createObjectURL(blob);
+      a.click();
+    });
   }
-
-  getFileList(): void {
-    this.downloadService.list().subscribe(result => {
-      this.fileList = result;
-    })
-  }
-
-  downloadFile(fileData: FileData): void {
-    this.downloadService
-      .download(fileData.fileName)
-      .subscribe(blob => saveAs(blob, fileData.fileName))
-  }
-
 }

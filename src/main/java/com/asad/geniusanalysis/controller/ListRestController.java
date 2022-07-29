@@ -2,13 +2,17 @@ package com.asad.geniusanalysis.controller;
 
 import com.asad.geniusanalysis.Scraper;
 import com.asad.geniusanalysis.service.DatabaseManager;
+import org.apache.commons.io.FileUtils;
 import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import org.springframework.core.io.InputStreamResource;
+import org.springframework.core.io.Resource;
+import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 @RestController
@@ -38,6 +42,33 @@ public class ListRestController {
 
         // This is the source of the unexpected JSON error. Weird thing with the strings.
         return new ResponseEntity<String>(file.getPath(), HttpStatus.OK);
+    }
+
+    @RequestMapping(path = "/getTemp", method = RequestMethod.GET)
+    public ResponseEntity<Resource> download() throws FileNotFoundException {
+        File dir = new File("temp/");
+
+        File file = dir.listFiles()[0];
+
+        ContentDisposition contentDisposition = ContentDisposition.builder("inline")
+                .filename(file.getName())
+                .build();
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentDisposition(contentDisposition);
+
+        InputStreamResource resource = new InputStreamResource(new FileInputStream(file));
+
+        return ResponseEntity.ok()
+                .headers(headers)
+                .contentLength(file.length())
+                .contentType(MediaType.APPLICATION_JSON)
+                .body(resource);
+    }
+
+    @RequestMapping(path = "/clearTemp", method = RequestMethod.GET)
+    public void clearTemp() throws IOException {
+        File dir = new File("temp/");
+        FileUtils.cleanDirectory(dir);
     }
 
 }

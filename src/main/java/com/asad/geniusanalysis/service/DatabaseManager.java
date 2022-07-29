@@ -38,7 +38,7 @@ public class DatabaseManager {
         ArrayList<String> albumsAdded = new ArrayList<>();
 
         for (File artistDir: dir.listFiles()) {
-            String artistName = artistDir.toString().split("\\\\")[1];
+            String artistName = artistDir.toString().split("/")[1];
 
             if (!(artistService.getByName(artistName) == null)) { // e.g. if you refresh after the database sweeps through the Collection folder.
                 continue;
