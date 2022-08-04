@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MainPageBodyComponent } from './main-page-body.component';
+import { PopularSongsComponent } from './popular-songs.component';
 
-describe('MainPageBodyComponent', () => {
-  let component: MainPageBodyComponent;
-  let fixture: ComponentFixture<MainPageBodyComponent>;
+describe('PopularSongsComponent', () => {
+  let component: PopularSongsComponent;
+  let fixture: ComponentFixture<PopularSongsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MainPageBodyComponent ]
+      declarations: [ PopularSongsComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(MainPageBodyComponent);
+    fixture = TestBed.createComponent(PopularSongsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

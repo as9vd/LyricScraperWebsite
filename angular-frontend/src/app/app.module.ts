@@ -10,30 +10,29 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './component/header/header.component';
-import { MainPageBodyComponent } from './component/main-page-body/main-page-body.component';
 import { AnalyserComponent } from './component/analyser/analyser.component';
 import { QuestionsComponent } from './component/questions/questions.component';
 import { SongScraperComponent } from './component/song-scraper/song-scraper.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { FilesComponent } from './component/files/files.component';
+import { PopularSongsComponent } from './component/popular-songs/popular-songs.component';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    MainPageBodyComponent,
     AnalyserComponent,
     QuestionsComponent,
     SongScraperComponent,
-    FilesComponent
+    PopularSongsComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
-      {path: '', component: AnalyserComponent},
-      {path: 'home', component: AnalyserComponent},
-      {path: 'popularSongs', component: AnalyserComponent},
-      {path: 'faq', component: QuestionsComponent},
+      { path: '', component: AnalyserComponent },
+      { path: 'home', component: AnalyserComponent },
+      { path: 'popularSongs', component: PopularSongsComponent },
+      { path: 'faq', component: QuestionsComponent },
     ]),
     AppRoutingModule,
     MatAutocompleteModule,
@@ -43,9 +42,9 @@ import { FilesComponent } from './component/files/files.component';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
-  
 })
-export class AppModule { }
+export class AppModule {}
