@@ -33,7 +33,6 @@ export class SongService {
       })
       .toPromise()
       .then();
-
     return (await '../../../../../') + data?.replace(/\\/g, '/');
   }
 

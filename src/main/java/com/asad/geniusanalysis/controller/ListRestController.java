@@ -1,7 +1,9 @@
 package com.asad.geniusanalysis.controller;
 
 import com.asad.geniusanalysis.Scraper;
+import com.asad.geniusanalysis.entity.RecentLink;
 import com.asad.geniusanalysis.service.DatabaseManager;
+import com.asad.geniusanalysis.service.Recent.RecentServiceImpl;
 import org.apache.commons.io.FileUtils;
 import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,14 +17,13 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 
 @RestController
 @CrossOrigin("http://localhost:4200")
 public class ListRestController {
     @Autowired
-    public DatabaseManager databaseManager;
+    public RecentServiceImpl recentService;
 
     // localhost:8080/persistLink[...]
     @RequestMapping(path = "/persistLink/{link}", method = RequestMethod.GET)
@@ -43,6 +44,8 @@ public class ListRestController {
 
         File file = new File("temp/" + title + ".json");
         Files.createLink(Paths.get("recents/" + title + ".json"), Paths.get("temp/" + title + ".json"));
+
+        this.recentService.createRecent(new RecentLink(geniusUrl));
 
         return new ResponseEntity<String>(file.getPath(), HttpStatus.OK);
     }

@@ -5,6 +5,8 @@ import com.asad.geniusanalysis.entity.Artist;
 import com.asad.geniusanalysis.entity.Song;
 import com.asad.geniusanalysis.service.Album.AlbumServiceImpl;
 import com.asad.geniusanalysis.service.Artist.ArtistServiceImpl;
+import com.asad.geniusanalysis.service.Recent.RecentService;
+import com.asad.geniusanalysis.service.Recent.RecentServiceImpl;
 import com.asad.geniusanalysis.service.Song.SongServiceImpl;
 import com.gargoylesoftware.htmlunit.BrowserVersion;
 import com.gargoylesoftware.htmlunit.WebClient;
@@ -22,12 +24,14 @@ public class DatabaseManager {
     public ArtistServiceImpl artistService;
     public SongServiceImpl songService;
     public AlbumServiceImpl albumService;
+    public RecentServiceImpl recentService;
 
     @Autowired
-    public DatabaseManager(ArtistServiceImpl artistService, SongServiceImpl songService, AlbumServiceImpl albumService) {
+    public DatabaseManager(ArtistServiceImpl artistService, SongServiceImpl songService, AlbumServiceImpl albumService, RecentServiceImpl recentService) {
         this.artistService = artistService;
         this.songService = songService;
         this.albumService = albumService;
+        this.recentService = recentService;
     }
 
     @Transactional
@@ -128,4 +132,9 @@ public class DatabaseManager {
     public void setAlbumService(AlbumServiceImpl albumService) {
         this.albumService = albumService;
     }
+
+    public RecentServiceImpl getRecentService() {return recentService;}
+
+    public void setRecentService(RecentServiceImpl recentService) {this.recentService = recentService;}
+
 }
