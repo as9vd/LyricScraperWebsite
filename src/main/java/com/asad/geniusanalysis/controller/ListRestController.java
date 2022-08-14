@@ -101,8 +101,7 @@ public class ListRestController {
                     oldestFile.delete();
                 }
             }
-        } else {
-            return;
+            recentService.deleteMostRecent();
         }
     }
 }

@@ -20,21 +20,46 @@ public class RecentServiceImpl implements RecentService {
     }
 
     @Transactional
-    @Override public void createRecent(RecentLink recentLink) {
+    @Override
+    public void createRecent(RecentLink recentLink) {
         this.recentRepository.save(recentLink);
     }
 
     @Transactional
-    @Override public Optional<RecentLink> getRecent(int id) {
+    @Override
+    public Optional<RecentLink> getRecent(int id) {
         return recentRepository.findById(id);
     }
 
     @Transactional
-    @Override public void deleteById(int id) {
+    @Override
+    public void deleteById(int id) {
         recentRepository.deleteById(id);
     }
 
-    @Override public List<RecentLink> getAllRecents() {
+    @Override
+    @Transactional
+    public List<RecentLink> getAllRecents() {
         return recentRepository.findAll();
+    }
+
+    @Override
+    @Transactional
+    public void deleteAll() {
+        for (int i = 0; i < getAllRecents().size(); i++) {
+            deleteById(getAllRecents().get(i).id);
+        }
+    }
+
+    @Override
+    @Transactional
+    public void deleteMostRecent() {
+        if (getAllRecents().size() >= 5) {
+            int minId = Integer.MAX_VALUE;
+            for (int i = 0; i < getAllRecents().size(); i++) {
+                minId = Math.min(minId, getAllRecents().get(i).id);
+            }
+            deleteById(minId);
+        }
     }
 }

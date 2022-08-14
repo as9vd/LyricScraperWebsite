@@ -1,8 +1,10 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 import { map, Observable, startWith } from 'rxjs';
+import { RecentLink } from 'src/app/common/recentLink/recent-link';
 import { Song } from 'src/app/common/song/song';
 import { ArtistService } from 'src/app/service/artist-service/artist.service';
+import { RecentService } from 'src/app/service/recent-service/recent-service.service';
 import { SongService } from 'src/app/service/song-service/song.service';
 
 @Component({
@@ -12,6 +14,7 @@ import { SongService } from 'src/app/service/song-service/song.service';
 })
 export class PopularSongsComponent implements OnInit {
   public songList: Song[] = [];
+  public recentsList: RecentLink[] = [];
   public inputForm!: FormGroup;
   public filteredOptions: Observable<Song[]>;
 
@@ -20,12 +23,18 @@ export class PopularSongsComponent implements OnInit {
   constructor(
     @Inject(ArtistService) private artistService: ArtistService,
     @Inject(SongService) private songService: SongService,
-    @Inject(FormBuilder) private formBuilder: FormBuilder
+    @Inject(FormBuilder) private formBuilder: FormBuilder,
+    @Inject(RecentService) private recentService: RecentService
   ) {}
 
   ngOnInit(): void {
     this.songService.getSongList().subscribe((songs) => {
       this.songList = songs;
+    });
+
+    this.recentService.getRecents().subscribe((recents) => {
+      console.log(recents);
+      this.recentsList = recents;
     });
 
     this.inputForm = this.formBuilder.group({
@@ -54,7 +63,7 @@ export class PopularSongsComponent implements OnInit {
   }
 
   onClick() {
-    console.log(this.inputLink);
+    console.log(this.recentsList);
     // this.songService.getSongJSON(this.inputLink);
   }
 

@@ -17,4 +17,8 @@ public interface RecentService {
     void deleteById(int id);
 
     List<RecentLink> getAllRecents();
+
+    void deleteAll();
+
+    void deleteMostRecent();
 }

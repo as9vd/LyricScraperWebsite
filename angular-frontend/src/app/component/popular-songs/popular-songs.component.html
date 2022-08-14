@@ -7,11 +7,8 @@
   <p class="instruction-text">
     Here are a list of songs that have been recently parsed.
   </p>
-  <p>'../../../../../recents'</p>
-
-  <ul>
-    <li></li>
-  </ul>
-
+  <div *ngFor="let recent of recentsList">
+    <p>{{ recent.link }}</p>
+  </div>
   <button (click)="onClick()">Click me pal</button>
 </div>
