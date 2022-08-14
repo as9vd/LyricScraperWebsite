@@ -8,28 +8,9 @@
     Here are a list of songs that have been recently parsed.
   </p>
 
-  <form class="form" [formGroup]="inputForm">
-    <mat-form-field>
-      <input
-        #fieldInput
-        formControlName="searchBar"
-        type="text"
-        matInput
-        [matAutocomplete]="auto"
-      />
-
-      <mat-autocomplete #auto="matAutocomplete" [displayWith]="displaySong">
-        <mat-select (valueChange)="changeValue($event)">
-          <mat-option
-            *ngFor="let option of filteredOptions | async"
-            [value]="option"
-          >
-            {{ option.link }}
-          </mat-option>
-        </mat-select>
-      </mat-autocomplete>
-    </mat-form-field>
-  </form>
+  <ul>
+    <li></li>
+  </ul>
 
   <button (click)="onClick()">Click me pal</button>
 </div>

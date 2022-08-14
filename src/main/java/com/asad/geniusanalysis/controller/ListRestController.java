@@ -40,7 +40,6 @@ public class ListRestController {
 
         File file = new File("temp/" + title + ".json");
 
-        // This is the source of the unexpected JSON error. Weird thing with the strings.
         return new ResponseEntity<String>(file.getPath(), HttpStatus.OK);
     }
 
@@ -70,5 +69,4 @@ public class ListRestController {
         File dir = new File("temp/");
         FileUtils.cleanDirectory(dir);
     }
-
 }
