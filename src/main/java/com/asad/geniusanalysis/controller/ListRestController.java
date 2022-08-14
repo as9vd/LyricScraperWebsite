@@ -14,6 +14,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 @RestController
 @CrossOrigin("http://localhost:4200")
@@ -23,7 +26,7 @@ public class ListRestController {
 
     // localhost:8080/persistLink[...]
     @RequestMapping(path = "/persistLink/{link}", method = RequestMethod.GET)
-    public ResponseEntity<String> test(@PathVariable String link) {
+    public ResponseEntity<String> test(@PathVariable String link) throws IOException {
         String baseUrl = "https://genius.com/";
 
         String geniusUrl = baseUrl + link;
@@ -39,6 +42,7 @@ public class ListRestController {
         }
 
         File file = new File("temp/" + title + ".json");
+        Files.createLink(Paths.get("recents/" + title + ".json"), Paths.get("temp/" + title + ".json"));
 
         return new ResponseEntity<String>(file.getPath(), HttpStatus.OK);
     }
@@ -47,6 +51,8 @@ public class ListRestController {
     public ResponseEntity<Resource> download() throws FileNotFoundException {
         File dir = new File("temp/");
 
+        // fix this. only sends when clicked download button. either return oldest file or find another way
+        // also fix the issue where you send the same link multiple times. weird stuff with paths
         File file = dir.listFiles()[0];
 
         ContentDisposition contentDisposition = ContentDisposition.builder("inline")
@@ -67,13 +73,20 @@ public class ListRestController {
     @RequestMapping(path = "/clearTemp", method = RequestMethod.GET)
     public void clearTemp() throws IOException {
         File dir = new File("temp/");
+        FileUtils.cleanDirectory(dir);
+    }
 
-        if (dir.length() >= 10) {
+    @RequestMapping(path = "/clearRecents", method = RequestMethod.GET)
+    public void clearRecents() {
+        File dir = new File("recents/");
+
+        System.out.println(FileUtils.sizeOfDirectory(dir));
+
+        if (dir.list().length > 5) {
             File[] logFiles = dir.listFiles();
             long oldestDate = Long.MAX_VALUE;
             File oldestFile = null;
-            if (logFiles != null && logFiles.length > 10) {
-                //delete oldest files after theres more than 500 log files
+            if (logFiles != null) {
                 for (File f : logFiles) {
                     if (f.lastModified() < oldestDate) {
                         oldestDate = f.lastModified();
@@ -85,7 +98,8 @@ public class ListRestController {
                     oldestFile.delete();
                 }
             }
+        } else {
+            return;
         }
-//        FileUtils.cleanDirectory(dir);
     }
 }

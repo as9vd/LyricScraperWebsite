@@ -19,4 +19,8 @@ export class DownloadService {
   clean() {
     return this.httpClient.get('http://localhost:8080/clearTemp');
   }
+
+  clearRecents() {
+    return this.httpClient.get('http://localhost:8080/clearRecents');
+  }
 }

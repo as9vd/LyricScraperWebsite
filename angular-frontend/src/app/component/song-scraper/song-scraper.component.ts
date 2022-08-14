@@ -62,7 +62,8 @@ export class SongScraperComponent implements OnInit {
     } catch (exception) {
       this.validLink = false;
     } finally {
-      await console.log('Was that a valid link? ' + this.validLink);
+      this.downloadService.clearRecents().subscribe();
+      await console.log('Valid link: ' + this.validLink);
     }
   }
 
