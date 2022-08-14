@@ -67,6 +67,25 @@ public class ListRestController {
     @RequestMapping(path = "/clearTemp", method = RequestMethod.GET)
     public void clearTemp() throws IOException {
         File dir = new File("temp/");
-        FileUtils.cleanDirectory(dir);
+
+        if (dir.length() >= 10) {
+            File[] logFiles = dir.listFiles();
+            long oldestDate = Long.MAX_VALUE;
+            File oldestFile = null;
+            if (logFiles != null && logFiles.length > 10) {
+                //delete oldest files after theres more than 500 log files
+                for (File f : logFiles) {
+                    if (f.lastModified() < oldestDate) {
+                        oldestDate = f.lastModified();
+                        oldestFile = f;
+                    }
+                }
+
+                if (oldestFile != null) {
+                    oldestFile.delete();
+                }
+            }
+        }
+//        FileUtils.cleanDirectory(dir);
     }
 }
