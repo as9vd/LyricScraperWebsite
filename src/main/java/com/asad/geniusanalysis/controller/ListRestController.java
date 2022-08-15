@@ -83,9 +83,7 @@ public class ListRestController {
     public void clearRecents() {
         File dir = new File("recents/");
 
-        System.out.println(FileUtils.sizeOfDirectory(dir));
-
-        if (dir.list().length > 5) {
+        if (recentService.getAllRecents().size() > 5) {
             File[] logFiles = dir.listFiles();
             long oldestDate = Long.MAX_VALUE;
             File oldestFile = null;

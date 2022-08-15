@@ -29,6 +29,7 @@
   justify-content: center;
   color: #d8dee9;
   font-size: 1.4rem;
+  margin-bottom: 1.2rem;
 }
 
 form {
@@ -63,4 +64,37 @@ input {
 mat-option {
   color: #212121;
   font-size: 1.2rem;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 40%;
+  height: 50%;
+}
+
+.btn {
+  width: 100%;
+  height: 50%;
+  font-size: 1rem;
+  transition-duration: 0.2s;
+  border-radius: 4px;
+  margin-bottom: 1.2rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0.625rem;
+}
+
+.btn:hover {
+  color: #212121;
+  background-color: #eceff4;
+  /* transform: rotate(2.5deg); */
+  transform: scale(1.0125);
+  cursor: pointer;
+}
+
+.btn:active {
+  background-color: #27a0c6;
 }

@@ -5,10 +5,20 @@
 <div class="container">
   <h1 class="main-header">Repository</h1>
   <p class="instruction-text">
-    Here are a list of songs that have been recently parsed.
+    Here are some songs that have been recently parsed.
   </p>
-  <div *ngFor="let recent of recentsList">
-    <p>{{ recent.link }}</p>
+  <div class="buttons">
+    <button
+      *ngFor="let recent of recentsList"
+      class="btn"
+      (click)="onClick(recent.link)"
+    >
+      🔥
+      {{
+        recent.link.length < 69
+          ? recent.link
+          : recent.link.substring(0, 69) + "..."
+      }}
+    </button>
   </div>
-  <button (click)="onClick()">Click me pal</button>
 </div>

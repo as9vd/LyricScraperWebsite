@@ -33,7 +33,6 @@ export class PopularSongsComponent implements OnInit {
     });
 
     this.recentService.getRecents().subscribe((recents) => {
-      console.log(recents);
       this.recentsList = recents;
     });
 
@@ -62,9 +61,8 @@ export class PopularSongsComponent implements OnInit {
     return song.title;
   }
 
-  onClick() {
-    console.log(this.recentsList);
-    // this.songService.getSongJSON(this.inputLink);
+  onClick(link) {
+    window.open(link);
   }
 
   changeValue(value: any) {
