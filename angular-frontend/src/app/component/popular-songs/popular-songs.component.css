@@ -72,6 +72,7 @@ mat-option {
   justify-content: start;
   width: 40%;
   height: 50%;
+  margin-top: 0.4rem;
 }
 
 .btn {
@@ -96,5 +97,6 @@ mat-option {
 }
 
 .btn:active {
-  background-color: #27a0c6;
+  background-color: #d08770;
+  color: #eceff4;
 }
