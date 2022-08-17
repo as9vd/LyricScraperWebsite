@@ -52,6 +52,8 @@ export class SongScraperComponent implements OnInit {
     this.jsonButtonPressed = true;
 
     try {
+      this.downloadService.clean().subscribe();
+
       let path = this.songService.getSongJSON(this.inputLink);
 
       await path.then((value) => {
