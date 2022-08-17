@@ -33,7 +33,7 @@
 }
 
 .qna {
-  margin-top: 1.2rem;
+  /* margin-top: 1.2rem; */
   color: #eceff4;
   display: flex;
   flex-direction: column;
@@ -46,15 +46,16 @@
   color: #eceff4;
   font-weight: 700;
   letter-spacing: -0.5px;
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   animation: color-change 5s infinite;
 }
 
 .answer-text {
-  margin-top: 1rem;
+  margin-top: 0.6rem;
   font-weight: 400;
   font-size: 1.2rem;
   letter-spacing: -0.5px;
+  margin-bottom: 1.6rem;
 }
 
 .answer-text a {

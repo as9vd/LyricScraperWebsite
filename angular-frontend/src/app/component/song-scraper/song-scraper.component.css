@@ -53,13 +53,13 @@ input:focus {
 }
 
 .buttons button:focus {
-  animation: shake 0.5s;
+  animation: shake 0.3s;
   animation-iteration-count: 4;
   /* background-color: #00BFC8; */
 }
 
 .buttons button:active {
-  background-color: #27a0c6;
+  /* background-color: #27a0c6; */
 }
 
 .btn-json {
@@ -134,7 +134,7 @@ input:focus {
 
 .enabled {
   visibility: visible;
-  margin-top: 2.4rem;
+  margin-top: 1rem;
 }
 
 .btn-generated {
