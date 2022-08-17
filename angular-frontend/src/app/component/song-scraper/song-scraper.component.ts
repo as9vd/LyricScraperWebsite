@@ -50,9 +50,8 @@ export class SongScraperComponent implements OnInit {
   // What we want: return a file/path to a file.
   async onClick() {
     this.jsonButtonPressed = true;
-
     try {
-      this.downloadService.clean().subscribe();
+      await this.downloadService.clean().subscribe();
 
       let path = this.songService.getSongJSON(this.inputLink);
 
@@ -64,7 +63,7 @@ export class SongScraperComponent implements OnInit {
     } catch (exception) {
       this.validLink = false;
     } finally {
-      this.downloadService.clearRecents().subscribe();
+      await this.downloadService.clearRecents().subscribe();
       await console.log('Valid link: ' + this.validLink);
     }
   }
