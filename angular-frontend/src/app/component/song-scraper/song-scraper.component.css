@@ -1,270 +1,273 @@
 * {
-    margin: 0 0;
-    padding: 0;
-    font-size: 10px;
-    font-family: 'Lato', sans-serif;
+  margin: 0 0;
+  padding: 0;
+  font-size: 10px;
+  font-family: "Lato", sans-serif;
 }
 
 .container {
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    width: 90vw;
-    margin-top: -1.6rem;
-    gap: 1.6rem;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  margin-top: -1.6rem;
+  gap: 1.6rem;
 }
 
 form {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 input {
-    color: #212121;
-    width: 75%;
-    font-size: 1.6rem;
-    padding: 0.8rem;
-    background-color: white;
-    border-radius: 5px;
-    transition: 0.25s all;
+  color: #212121;
+  width: 75%;
+  font-size: 1.6rem;
+  padding: 0.8rem;
+  background-color: white;
+  border-radius: 5px;
+  transition: 0.25s all;
 }
 
 input:focus {
-    outline: none;
+  outline: none;
 }
 
 .buttons {
-    display: flex;
-    justify-content: center;
-    gap: 4.8rem;
+  display: flex;
+  justify-content: center;
+  gap: 4.8rem;
 }
 
 .buttons button {
-    /* color: #212121; */
-    font-size: 1.0rem;
-    padding: 0.2rem 0.4rem 0.2rem 0.4rem;
-    border-radius: 0.4rem;
-    height: 3.2rem;
-    width: 8rem;
-    transition-duration: 0.2s;
+  /* color: #212121; */
+  font-size: 1rem;
+  padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+  border-radius: 0.4rem;
+  height: 3.2rem;
+  width: 8rem;
+  transition-duration: 0.2s;
 
-    margin-top: 1.6rem;
+  margin-top: 1.6rem;
 }
 
 .buttons button:focus {
-    animation: shake 0.5s;
-    animation-iteration-count: 4;
-    /* background-color: #00BFC8; */
+  animation: shake 0.5s;
+  animation-iteration-count: 4;
+  /* background-color: #00BFC8; */
 }
 
 .buttons button:active {
-    background-color: #27A0C6;
+  background-color: #27a0c6;
 }
 
 .btn-json {
-    color: #ECEFF4;
-    background-color: #5E81AC;
+  color: #eceff4;
+  background-color: #5e81ac;
 }
 
 .btn-json:hover {
-    color: #212121;
-    background-color: #ECEFF4;
-    transform: rotate(5deg);
-    cursor: pointer;
+  color: #212121;
+  background-color: #eceff4;
+  transform: rotate(5deg);
+  cursor: pointer;
 }
 
 .btn-text {
-    color: #ECEFF4;
-    background-color: #5E81AC;
-    opacity: 0.35;
-    position: relative;
+  color: #eceff4;
+  background-color: #5e81ac;
+  opacity: 0.35;
+  position: relative;
 }
 
 .btn-text:before {
-    content: 'Coming Soon!';
-    display: inline-block;
-    width: 55%;
-    height: 15px;
-    opacity: 1;
-    font-size: 10px;
-    position: absolute;
-    right: -27.5%;
-    top: -5%;
-    transform: rotate(45deg);
-    background-color: #DEA01E;
-    color: #212121;
-    border-color: #212121;
-    border-radius: 2px;
+  content: "Coming Soon!";
+  display: inline-block;
+  width: 55%;
+  height: 15px;
+  opacity: 1;
+  font-size: 10px;
+  position: absolute;
+  right: -27.5%;
+  top: -5%;
+  transform: rotate(45deg);
+  background-color: #dea01e;
+  color: #212121;
+  border-color: #212121;
+  border-radius: 2px;
 }
 
-.btn-text:hover>.btn-text:after {
-    background-color: #ECEFF4;
+.btn-text:hover > .btn-text:after {
+  background-color: #eceff4;
 }
 
 .buttons button:hover {
-    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 .download-section {
-    width: 100%;
-    display: flex;
-    margin-top: 2.0rem;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1.6rem;
-    visibility: visible;
-    transition: 1s all;
-    transition-delay: 2s;
+  width: 100%;
+  display: flex;
+  margin-top: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  visibility: visible;
+  transition: 1s all;
+  transition-delay: 2s;
 }
 
 .successful-generate,
 .unsuccessful-generate {
-    color: white;
-    margin: 0 auto;
-    font-size: 1.2rem;
+  color: white;
+  margin: 0 auto;
+  font-size: 1.2rem;
 }
 
 .disabled {
-    display: none;
-    visibility: hidden;
+  display: none;
+  visibility: hidden;
 }
 
 .enabled {
-    visibility: visible;
-    margin-top: 2.4rem;
+  visibility: visible;
+  margin-top: 2.4rem;
 }
 
 .btn-generated {
-    width: 15%;
-    height: 3.0rem;
-    color: #ECEFF4;
-    background-color: #3D4756;
-    transition: 0.25s all;
-    font-size: 1.2rem;
-    border-radius: 8px;
-    cursor: pointer;
+  width: 15%;
+  height: 3rem;
+  color: #eceff4;
+  background-color: #3d4756;
+  transition: 0.25s all;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 .btn-generated:hover {
-    height: 3.2rem;
-    width: 16%;
-    color: #212121;
-    background-color: #ECEFF4;
+  height: 3.2rem;
+  width: 16%;
+  color: #212121;
+  background-color: #eceff4;
 }
 
 .btn-generated:active {
-    animation: shake 0.5s;
+  animation: shake 0.5s;
 }
 
 @keyframes shake {
-    0% {
-        transform: translate(1px, 1px) rotate(0deg);
-    }
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
 
-    10% {
-        transform: translate(-1px, -2px) rotate(-1deg);
-    }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
 
-    20% {
-        transform: translate(-3px, 0px) rotate(1deg);
-    }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
 
-    30% {
-        transform: translate(3px, 2px) rotate(0deg);
-    }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
 
-    40% {
-        transform: translate(1px, -1px) rotate(1deg);
-    }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
 
-    50% {
-        transform: translate(-1px, 2px) rotate(-1deg);
-    }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
 
-    60% {
-        transform: translate(-3px, 1px) rotate(0deg);
-    }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
 
-    70% {
-        transform: translate(3px, 1px) rotate(-1deg);
-    }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
 
-    80% {
-        transform: translate(-1px, -1px) rotate(1deg);
-    }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
 
-    90% {
-        transform: translate(1px, 2px) rotate(0deg);
-    }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
 
-    100% {
-        transform: translate(1px, -2px) rotate(-1deg);
-    }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
 }
 
 @keyframes anim-popoutin {
-    0% {
-        color: #ECEFF4;
-        transform: scale(0);
-        opacity: 0;
-        text-shadow: 0 0 0 rgba(0, 0, 0, 0);
-    }
+  0% {
+    color: #eceff4;
+    transform: scale(0);
+    opacity: 0;
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
 
-    25% {
-        color: #3DD9B1;
-        transform: scale(1.35);
-        opacity: 1;
-        text-shadow: 3px 10px 5px rgba(0, 0, 0, 0.5);
-    }
+  25% {
+    color: #3dd9b1;
+    transform: scale(1.35);
+    opacity: 1;
+    text-shadow: 3px 10px 5px rgba(0, 0, 0, 0.5);
+  }
 
-    50% {
-        color: #ECEFF4;
-        transform: scale(1);
-        opacity: 1;
-        text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
-    }
+  50% {
+    color: #eceff4;
+    transform: scale(1);
+    opacity: 1;
+    text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+  }
 
-    100% {
-        /* animate nothing to add pause at the end of animation */
-        transform: scale(1);
-        opacity: 1;
-        text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
-    }
+  100% {
+    /* animate nothing to add pause at the end of animation */
+    transform: scale(1);
+    opacity: 1;
+    text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+  }
 }
 
 .fromtop {
-    animation: 2s anim-fromtop linear infinite;
+  animation: 2s anim-fromtop linear infinite;
 }
 
 @keyframes anim-fromtop {
-    0% {
-        opacity: 0;
-        transform: translateY(-100%);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
 
-    25% {
-        opacity: 1;
-        transform: translateY(0%);
-    }
+  25% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
 
-    50% {}
+  50% {
+  }
 
-    100% {}
+  100% {
+  }
 }
 
 .pop-outin {
-    animation: 2s anim-popoutin ease 1;
+  animation: 2s anim-popoutin ease 1;
 }
 
 .btn-valid:focus {
-    color: #212121;
-    transition-delay: 0.2s;
-    background-color: #9CED8D;
-}  
+  color: #212121;
+  transition-delay: 0.2s;
+  background-color: #9ced8d;
+}
 
 .btn-invalid:focus {
-    transition-delay: 0.2s;
-    background-color: #C75F5A;
+  transition-delay: 0.2s;
+  background-color: #c75f5a;
 }
