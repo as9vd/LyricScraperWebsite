@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 public class GeniusAnalysisApplication {
     // Immediate issues to fix:
     // 1. CSS styling with button being clicked.
-    // 2. Ugly FAQ page.
+    // 2. Scraping script: will not always be accurate.
     //
     // Things to look at in future:
     // 1. CSRF tokens.

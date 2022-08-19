@@ -34,10 +34,10 @@
 }
 
 img {
-  max-width: 6%;
+  max-width: 5%;
   max-height: auto;
-  margin-bottom: 0.8rem;
-  margin-top: -1.6rem;
+  margin-bottom: 0.4rem;
+  /* margin-top: 1.6rem; */
 }
 
 .qna {

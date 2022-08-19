@@ -65,6 +65,7 @@ input:focus {
 .btn-json {
   color: #eceff4;
   background-color: #5e81ac;
+  border-color: rgba(111, 111, 111, 0.2);
 }
 
 .btn-json:hover {
@@ -264,10 +265,10 @@ input:focus {
 .btn-valid:focus {
   color: #212121;
   transition-delay: 0.2s;
-  background-color: #9ced8d;
+  /* background-color: #9ced8d; */
 }
 
 .btn-invalid:focus {
   transition-delay: 0.2s;
-  background-color: #c75f5a;
+  /* background-color: #c75f5a; */
 }
