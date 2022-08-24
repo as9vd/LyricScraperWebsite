@@ -7,8 +7,8 @@ import { RecentLink } from 'src/app/common/recentLink/recent-link';
   providedIn: 'root',
 })
 export class RecentService {
-  // private baseUrl = 'http://localhost:8080/api/recentLinks';
-  private baseUrl = 'http://geniusscraper.us-east-2.elasticbeanstalk.com';
+  private baseUrl = 'http://localhost:8080/api/recentLinks';
+  // private baseUrl = 'http://geniusscraper.us-east-2.elasticbeanstalk.com';
   public recentList: RecentLink[] = [];
 
   constructor(@Inject(HttpClient) private httpClient: HttpClient) {}
