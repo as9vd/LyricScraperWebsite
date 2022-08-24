@@ -11,8 +11,8 @@ export class SongService {
   private baseUrl = 'http://localhost:8080';
   // private baseUrl = 'http://geniusscraper.us-east-2.elasticbeanstalk.com';
   public songList: Song[] = [];
-
   public currentPath: string;
+  public file: File;
 
   constructor(@Inject(HttpClient) private httpClient: HttpClient) {}
 
@@ -31,7 +31,17 @@ export class SongService {
       })
       .toPromise()
       .then();
-    return (await '../../../../../') + data?.replace(/\\/g, '/');
+
+    let file = new File([data as BlobPart], 'song.json', {
+      type: 'application/json',
+    });
+
+    this.file = file;
+    const blob = new Blob([data as BlobPart], { type: 'application/json' });
+    const url = window.URL.createObjectURL(blob);
+    window.open(url);
+
+    return file;
   }
 
   getSongList(): Observable<Song[]> {

@@ -1,5 +1,6 @@
 package com.asad.geniusanalysis.entity;
 
+import com.fasterxml.jackson.annotation.JsonRawValue;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -16,10 +17,20 @@ public class RecentLink {
     @Column(name = "link")
     public String link;
 
+    @Column(name = "words", columnDefinition = "json")
+    @JsonRawValue
+    public String words;
+
     public RecentLink() {
     }
 
     public RecentLink(String link) {
         this.link = link;
     }
+
+    public RecentLink(String link, String json) {
+        this.link = link;
+        this.words = json;
+    }
+
 }

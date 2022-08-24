@@ -236,14 +236,14 @@ public class Scraper {
         }
 
         JSONObject butterflyEffect = new JSONObject().put(title, arr);
+        String return_val = "";
 
         try (PrintWriter out = new PrintWriter(path + "/" + title + ".json")) {
             out.println(butterflyEffect.toString(2));
+            return_val += butterflyEffect.toString(2);
         }
 
-        System.out.println(path + "; " + title);
-
-        return title;
+        return return_val;
     }
 
     public static String createAlbumJSON(String link) throws IOException, JSONException { // Used STARGAZING to prove the accuracy of this.

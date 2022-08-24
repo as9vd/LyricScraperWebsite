@@ -22,17 +22,6 @@ public class HomeController {
         return "index.html";
     }
 
-    @RequestMapping("/loadDB")
-    public String loadDB(Model model) {
-        databaseManager.addFromCollection();
-
-        model.addAttribute("artistList", databaseManager.getArtistService().getAllArtists());
-        model.addAttribute("albumList", databaseManager.getAlbumService().getAllAlbums());
-        model.addAttribute("songList", databaseManager.getSongService().getAllSongs());
-
-        return "loadDB.html";
-    }
-
     @RequestMapping("/testDb")
     public String testDb(Model model) {
         System.out.println("This is a page for debugging purposes.");

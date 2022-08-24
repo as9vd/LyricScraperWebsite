@@ -1,7 +1,6 @@
 package com.asad.geniusanalysis.service.Recent;
 
 import com.asad.geniusanalysis.entity.RecentLink;
-import com.asad.geniusanalysis.entity.Song;
 
 import java.util.List;
 import java.util.Optional;

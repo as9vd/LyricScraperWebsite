@@ -11,8 +11,6 @@ export class ArtistService {
   private baseUrl = 'http://localhost:8080/api/artists';
   // private baseUrl = 'http://geniusscraper.us-east-2.elasticbeanstalk.com';
 
-  private fullArtistUrl = 'http://localhost:8080/api/artists?size=1000';
-
   constructor(@Inject(HttpClient) private httpClient: HttpClient) {}
 
   getArtist(artistID: number): Observable<Artist> {
@@ -22,12 +20,9 @@ export class ArtistService {
   }
 
   getArtistList(): Observable<Artist[]> {
-    return (
-      this.httpClient
-        // .get<GetResponse>(this.fullArtistUrl)
-        .get<GetResponse>(this.baseUrl + '/api/artists?size=1000')
-        .pipe(map((response) => response._embedded.artists))
-    );
+    return this.httpClient
+      .get<GetResponse>(this.baseUrl + '/api/artists?size=1000')
+      .pipe(map((response) => response._embedded.artists));
   }
 }
 
