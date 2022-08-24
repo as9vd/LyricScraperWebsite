@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 export class DownloadService {
   constructor(@Inject(HttpClient) private httpClient: HttpClient) {}
 
-  private baseUrl = 'http://localhost:8080/getTemp';
+  private baseUrl = 'http://localhost:8080';
   // private baseUrl = 'http://geniusscraper.us-east-2.elasticbeanstalk.com';
 
   download() {

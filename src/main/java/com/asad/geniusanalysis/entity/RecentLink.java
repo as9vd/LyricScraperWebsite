@@ -17,7 +17,6 @@ public class RecentLink {
     public String link;
 
     public RecentLink() {
-
     }
 
     public RecentLink(String link) {

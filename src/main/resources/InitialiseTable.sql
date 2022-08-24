@@ -25,3 +25,10 @@ CREATE TABLE songs (
                        FOREIGN KEY (artist_id) REFERENCES artists(id),
                        FOREIGN KEY (album_id) REFERENCES albums(id)
 );
+
+CREATE TABLE `recents` (
+                           `id` int NOT NULL AUTO_INCREMENT,
+                           `link` char(255) NOT NULL,
+                           `words` JSON NOT NULL,
+                           PRIMARY KEY (`id`)
+);

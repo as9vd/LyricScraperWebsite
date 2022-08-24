@@ -65,6 +65,8 @@ public class ListRestController {
 
         InputStreamResource resource = new InputStreamResource(new FileInputStream(file));
 
+        System.out.println("eyes closed just swanging");
+
         return ResponseEntity.ok()
                 .headers(headers)
                 .contentLength(file.length())

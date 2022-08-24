@@ -241,6 +241,8 @@ public class Scraper {
             out.println(butterflyEffect.toString(2));
         }
 
+        System.out.println(path + "; " + title);
+
         return title;
     }
 

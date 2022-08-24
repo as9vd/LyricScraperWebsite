@@ -8,7 +8,7 @@ import { Song } from 'src/app/common/song/song';
   providedIn: 'root',
 })
 export class SongService {
-  private baseUrl = 'http://localhost:8080/api/songs?size=10000';
+  private baseUrl = 'http://localhost:8080';
   // private baseUrl = 'http://geniusscraper.us-east-2.elasticbeanstalk.com';
   public songList: Song[] = [];
 
@@ -25,9 +25,6 @@ export class SongService {
   async getSongJSON(link: string) {
     let relevantSnippet = link.split('genius.com/')[1];
 
-    var path = '';
-
-    // The responseType helped change the JSON parse error.
     let data = await this.httpClient
       .get(this.baseUrl + '/persistLink/' + relevantSnippet, {
         responseType: 'text',
