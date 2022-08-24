@@ -30,28 +30,10 @@ import java.util.stream.Collectors;
 
 @ComponentScan("src/SpringStuff")
 public class Scraper {
-    //    public static void artistWordSum(String path) throws IOException { // Input ex: "Collection/Drake"
-//        HashMap<String, Double> overallWordCount = new HashMap<>();
-//        File[] albums = new File(path).listFiles();
-//
-//        for (int i = 0; i < albums.length; i++) {
-//            LineIterator it = FileUtils.lineIterator(new File(path + "/" + albums[i].getName() + "/WordCount.txt"), "UTF-8");
-//            try {
-//                while (it.hasNext()) {
-//                    String line = it.nextLine();
-//
-//                    // Make a function here that does what an earlier function did re: storing words in a map.
-//                }
-//            } finally {
-//                it.close();
-//            }
-//        }
-//    }
-
     public static void overallAnalysis(String link) throws IOException, JSONException {
         String path = createAlbumJSON(link);
-        albumAnalyser("Artists and Songs/" + path);
-        sortFolders();
+//        albumAnalyser("Artists and Songs/" + path);
+//        sortFolders();
     }
 
     public static void sortFolders() throws IOException {
@@ -204,6 +186,7 @@ public class Scraper {
             title = doc.title().split("– ")[1].split("Genius Lyrics")[0].split(" Lyrics")[0].replaceAll("\\W+", "");;
         }
 
+        // There are multiple lyric containers, so unfortunately, there's a bit of weirdness here.
         Elements lyrics = doc.select("#lyrics-root > div.Lyrics__Container-sc-1ynbvzw-6.YYrds");
 
         boolean debounce = false;

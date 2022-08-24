@@ -9,18 +9,21 @@ import { environment } from 'src/environments/environment';
 export class DownloadService {
   constructor(@Inject(HttpClient) private httpClient: HttpClient) {}
 
+  // private baseUrl = "http://localhost:8080/getTemp";
+  private baseUrl = 'http://geniusscraper.us-east-2.elasticbeanstalk.com';
+
   download() {
-    return this.httpClient.get('http://localhost:8080/getTemp', {
+    return this.httpClient.get(this.baseUrl + '/getTemp', {
       observe: 'response',
       responseType: 'blob',
     });
   }
 
   clean() {
-    return this.httpClient.get('http://localhost:8080/clearTemp');
+    return this.httpClient.get(this.baseUrl + '/clearTemp');
   }
 
   clearRecents() {
-    return this.httpClient.get('http://localhost:8080/clearRecents');
+    return this.httpClient.get(this.baseUrl + '/clearRecents');
   }
 }

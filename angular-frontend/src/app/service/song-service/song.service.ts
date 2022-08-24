@@ -8,7 +8,8 @@ import { Song } from 'src/app/common/song/song';
   providedIn: 'root',
 })
 export class SongService {
-  private baseUrl = 'http://localhost:8080/api/songs?size=10000';
+  // private baseUrl = 'http://localhost:8080/api/songs?size=10000';
+  private baseUrl = 'http://geniusscraper.us-east-2.elasticbeanstalk.com';
   public songList: Song[] = [];
 
   public currentPath: string;
@@ -16,7 +17,7 @@ export class SongService {
   constructor(@Inject(HttpClient) private httpClient: HttpClient) {}
 
   getSong(songID: number): Observable<Song> {
-    const songUrl = this.baseUrl + '/' + songID;
+    const songUrl = this.baseUrl + '/api/songs?size=10000' + '/' + songID;
 
     return this.httpClient.get<Song>(songUrl);
   }
@@ -28,7 +29,7 @@ export class SongService {
 
     // The responseType helped change the JSON parse error.
     let data = await this.httpClient
-      .get('http://localhost:8080/persistLink/' + relevantSnippet, {
+      .get(this.baseUrl + '/persistLink/' + relevantSnippet, {
         responseType: 'text',
       })
       .toPromise()
@@ -38,7 +39,7 @@ export class SongService {
 
   getSongList(): Observable<Song[]> {
     return this.httpClient
-      .get<GetResponseSongs>(this.baseUrl)
+      .get<GetResponseSongs>(this.baseUrl + '/api/songs?size=10000')
       .pipe(map((response) => response._embedded.songs));
   }
 

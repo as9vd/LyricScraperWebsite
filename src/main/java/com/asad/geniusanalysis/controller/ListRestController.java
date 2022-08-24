@@ -2,7 +2,6 @@ package com.asad.geniusanalysis.controller;
 
 import com.asad.geniusanalysis.Scraper;
 import com.asad.geniusanalysis.entity.RecentLink;
-import com.asad.geniusanalysis.service.DatabaseManager;
 import com.asad.geniusanalysis.service.Recent.RecentServiceImpl;
 import org.apache.commons.io.FileUtils;
 import org.json.JSONException;
@@ -20,7 +19,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 @RestController
-@CrossOrigin("http://localhost:4200")
+@CrossOrigin("*")
 public class ListRestController {
     @Autowired
     public RecentServiceImpl recentService;
@@ -72,6 +71,30 @@ public class ListRestController {
                 .contentType(MediaType.APPLICATION_JSON)
                 .body(resource);
     }
+
+    // finish this sometime
+//    @RequestMapping(path = "/generateAlbum/{link", method = RequestMethod.GET)
+//    public ResponseEntity<String> generateAlbum(@PathVariable String link) throws IOException {
+//        String baseUrl = "https://genius.com/";
+//        String geniusUrl = baseUrl + link;
+//        String folderName;
+//
+//        try {
+//            folderName = Scraper.createAlbumJSON(geniusUrl);
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        } catch (JSONException e) {
+//            throw new RuntimeException(e);
+//        }
+//
+//        File file = new File("Artists and Songs/" + folderName);
+//        Files.createLink(Paths.get("recents/" + title + ".json"), Paths.get("temp/" + title + ".json"));
+//
+//        this.recentService.createRecent(new RecentLink(geniusUrl));
+//
+//
+//        return new ResponseEntity<String>(file.getPath(), HttpStatus.OK);
+//    }
 
     @RequestMapping(path = "/clearTemp", method = RequestMethod.GET)
     public void clearTemp() throws IOException {

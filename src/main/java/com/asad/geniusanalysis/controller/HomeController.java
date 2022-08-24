@@ -12,7 +12,7 @@ import java.io.File;
 import java.io.IOException;
 
 @Controller
-@CrossOrigin("http://localhost:4200")
+@CrossOrigin("*")
 public class HomeController {
     @Autowired
     public DatabaseManager databaseManager;
