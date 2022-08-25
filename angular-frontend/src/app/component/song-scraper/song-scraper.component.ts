@@ -6,6 +6,7 @@ import { Song } from 'src/app/common/song/song';
 import { ArtistService } from 'src/app/service/artist-service/artist.service';
 import { SongService } from 'src/app/service/song-service/song.service';
 import { DownloadService } from 'src/app/service/download-service/download.service';
+import { Chart } from 'node_modules/chart.js';
 
 @Component({
   selector: 'song-scraper',
@@ -21,6 +22,12 @@ export class SongScraperComponent implements OnInit {
   public validLink: boolean;
 
   public jsonButtonPressed: boolean;
+
+  public file: File;
+  public chart = [];
+  public data;
+
+  public display: boolean = false;
 
   constructor(
     @Inject(ArtistService) private artistService: ArtistService,
@@ -57,11 +64,16 @@ export class SongScraperComponent implements OnInit {
       });
 
       this.validLink = true;
+
+      this.file = this.songService.file;
+
+      this.display = true;
     } catch (exception) {
       this.validLink = false;
     } finally {
       this.downloadService.clearRecents().subscribe();
       await console.log('Valid link: ' + this.validLink);
+      await console.log('Display canvas? ' + this.display);
     }
   }
 

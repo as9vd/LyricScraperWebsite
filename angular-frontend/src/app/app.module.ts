@@ -16,6 +16,7 @@ import { SongScraperComponent } from './component/song-scraper/song-scraper.comp
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { PopularSongsComponent } from './component/popular-songs/popular-songs.component';
 import { MatSelectModule } from '@angular/material/select';
+import { PieChartComponent } from './component/pie-chart/pie-chart.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { MatSelectModule } from '@angular/material/select';
     QuestionsComponent,
     SongScraperComponent,
     PopularSongsComponent,
+    PieChartComponent,
   ],
   imports: [
     BrowserModule,

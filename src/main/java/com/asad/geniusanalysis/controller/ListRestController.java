@@ -34,7 +34,6 @@ public class ListRestController {
 
     @RequestMapping(path = "/clearRecents", method = RequestMethod.GET)
     public void clearRecents() {
-        System.out.println(recentService.getAllRecents());
         while (recentService.getAllRecents().size() > 5) {
             recentService.deleteMostRecent();
         }

@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
+import { saveAs } from 'file-saver';
 import { map, Observable } from 'rxjs';
 import { Artist } from 'src/app/common/artist/artist';
 import { Song } from 'src/app/common/song/song';
@@ -13,6 +14,7 @@ export class SongService {
   public songList: Song[] = [];
   public currentPath: string;
   public file: File;
+  public data?: String;
 
   constructor(@Inject(HttpClient) private httpClient: HttpClient) {}
 
@@ -37,11 +39,9 @@ export class SongService {
     });
 
     this.file = file;
+    this.data = data!;
     const blob = new Blob([data as BlobPart], { type: 'application/json' });
-    const url = window.URL.createObjectURL(blob);
-    window.open(url);
-
-    return file;
+    saveAs(blob, 'song.json'); // https://stackoverflow.com/questions/51952190/how-can-i-download-file-using-angular-5
   }
 
   getSongList(): Observable<Song[]> {
