@@ -66,6 +66,7 @@ export class SongScraperComponent implements OnInit {
       this.validLink = true;
 
       this.file = this.songService.file;
+      this.data = this.songService.data;
 
       this.display = true;
     } catch (exception) {
@@ -85,11 +86,13 @@ export class SongScraperComponent implements OnInit {
     );
   }
 
+  copyText(event) {
+    event.select();
+  }
+
   displaySong(song: Song): string {
     return song.title;
   }
-
-  onSubmit() {}
 
   onDownloadClick() {
     this.downloadService.download();
