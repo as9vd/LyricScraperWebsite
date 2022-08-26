@@ -104,7 +104,7 @@ textarea:focus {
 }
 
 .generate-btn:active {
-  animation: shake 0.5s;
+  animation: shake 0.25s;
 }
 
 .generate-btn:hover {
@@ -119,6 +119,7 @@ textarea:focus {
   border-width: 0;
   font-size: 2.4rem;
   border: 0;
+  animation: none;
 }
 
 .btn-json:hover {
@@ -144,7 +145,7 @@ textarea:focus {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1.6rem;
+  gap: 0rem;
   visibility: visible;
   transition: 1s all;
   transition-delay: 2s;
@@ -154,7 +155,71 @@ textarea:focus {
 .unsuccessful-generate {
   color: white;
   margin: 0 auto;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
+  animation: tilt-n-move-shaking 0.5s infinite, colorchange 5s infinite;
+}
+
+@keyframes colorchange {
+  0% {
+    color: #f9f9f9;
+  }
+
+  10% {
+    color: #e3f6f5;
+  }
+
+  20% {
+    color: #ffffff;
+  }
+
+  30% {
+    color: #faf9f9;
+  }
+
+  40% {
+    color: #add2c9;
+  }
+
+  50% {
+    color: #ece8d9;
+  }
+
+  60% {
+    color: #488b8f;
+  }
+
+  70% {
+    color: #faf6e9;
+  }
+  80% {
+    color: #d6e4f0;
+  }
+
+  90% {
+    color: #f6f6f6;
+  }
+
+  100% {
+    color: #dfdfdf;
+  }
+}
+
+@keyframes tilt-n-move-shaking {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(5px, 5px) rotate(5deg);
+  }
+  50% {
+    transform: translate(0, 0) rotate(0eg);
+  }
+  75% {
+    transform: translate(-5px, 5px) rotate(-5deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
 }
 
 .disabled {
@@ -186,7 +251,8 @@ textarea:focus {
 }
 
 .btn-generated:active {
-  animation: shake 0.5s;
+  /* animation: shake 0.5s; */
+  size: 80%;
 }
 
 @keyframes shake {

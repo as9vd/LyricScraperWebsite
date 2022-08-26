@@ -34,10 +34,10 @@
 }
 
 img {
-  max-width: 5%;
+  max-width: 4%;
   max-height: auto;
-  margin-bottom: 0.4rem;
-  /* margin-top: 1.6rem; */
+  margin-bottom: 0.8rem;
+  margin-top: 0.8rem;
 }
 
 .qna {
@@ -46,7 +46,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: left;
+  align-items: center;
   margin-bottom: 2rem;
 }
 
@@ -61,7 +61,7 @@ img {
 .answer-text {
   margin-top: 0.6rem;
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   letter-spacing: 0.2px;
   margin-bottom: 0.8rem;
 }
@@ -69,7 +69,7 @@ img {
 .answer-text a {
   color: #eceff4;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 400;
 }
 

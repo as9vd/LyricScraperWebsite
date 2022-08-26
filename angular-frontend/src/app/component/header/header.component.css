@@ -33,7 +33,7 @@ body {
 .links {
   color: #eceff4;
   display: flex;
-  gap: 1.2rem;
+  gap: 2.4rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,12 +42,12 @@ body {
 .links a {
   color: #eceff4;
   text-decoration: none;
-  font-size: 1rem;
-  transition: 0.25s all;
+  font-size: 1.2rem;
+  transition: 0.15s all;
 }
 
 .links a:hover {
-  font-size: 1.05rem;
+  font-size: 1.25rem;
 }
 
 .links a:active {
