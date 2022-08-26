@@ -6,6 +6,7 @@
       formControlName="searchBar"
       type="text"
     />
+    <button class="generate-btn" (click)="onClick()">🔔</button>
   </form>
 
   <div [ngClass]="jsonButtonPressed ? 'enabled' : 'disabled'">
@@ -19,7 +20,7 @@
           [ngClass]="validLink ? 'btn-valid' : 'btn-invalid'"
           (click)="onClick()"
         >
-          Download
+          🗂
         </button>
       </div>
     </div>

@@ -26,26 +26,26 @@ input {
   max-height: 25%;
   height: 25%;
   font-size: 1.6rem;
-  padding: 1rem;
+  padding: 1.5rem;
   background-color: white;
   border: none;
   border-width: 0;
   border: 0;
-  border-radius: 5rem;
-  transition: 0.25s all;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
-    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  border-radius: 1rem;
+  transition: 0.2s all;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  margin-left: 2.8rem;
 }
 
 input:focus {
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   outline: none;
 }
 
 textarea {
   resize: none;
-  width: 20rem;
-  height: 10rem;
+  width: 25rem;
+  height: 15rem;
   font-size: 1.2rem;
   cursor: pointer;
   padding: 0.6rem;
@@ -69,13 +69,12 @@ textarea:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 4.8rem;
-  margin-top: 2.4rem;
+  flex-direction: column;
+  gap: 1.2rem;
 }
 
 .buttons button {
-  /* color: #212121; */
-  font-size: 1.1rem;
+  font-size: 2rem;
   padding: 0.2rem 0.4rem 0.2rem 0.4rem;
   border-radius: 0.4rem;
   height: 3.6rem;
@@ -88,25 +87,43 @@ textarea:focus {
 .buttons button:focus {
   animation: shake 0.3s;
   animation-iteration-count: 4;
-  /* background-color: #00BFC8; */
+}
+
+.generate-btn {
+  margin-left: 0.5rem;
+  border-radius: 10rem;
+  max-width: 5%;
+  font-size: 1.6rem;
+  width: 5%;
+  cursor: pointer;
+  background-color: #212121;
+  border: none;
+  border-width: 0;
+  border: 0;
+  transition: all 0.25s;
+}
+
+.generate-btn:active {
+  animation: shake 0.25s;
+}
+
+.generate-btn:hover {
+  font-size: 1.8rem;
+  transform: scale(1.0725);
 }
 
 .btn-json {
   color: #eceff4;
-  /* background-color: #5e81ac; */
-  background-color: #434c5e;
-  /* border-color: #4c566a; */
+  background-color: #212121;
   border: none;
   border-width: 0;
+  font-size: 2.4rem;
   border: 0;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
-    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .btn-json:hover {
-  color: #212121;
-  background-color: #eceff4;
-  transform: rotate(5deg);
+  background-color: #212121;
+  transform: rotate(5deg) scale(1.075);
   cursor: pointer;
 }
 
@@ -117,36 +134,13 @@ textarea:focus {
   position: relative;
 }
 
-.btn-text:before {
-  content: "Coming Soon!";
-  display: inline-block;
-  width: 55%;
-  height: 15px;
-  opacity: 1;
-  font-size: 10px;
-  position: absolute;
-  right: -27.5%;
-  top: -5%;
-  transform: rotate(45deg);
-  background-color: #dea01e;
-  color: #212121;
-  border-color: #212121;
-  border-radius: 2px;
-}
-
 .btn-text:hover > .btn-text:after {
   background-color: #eceff4;
-}
-
-.buttons button:hover {
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
-    0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 .download-section {
   width: 100%;
   display: flex;
-  margin-top: 2rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
