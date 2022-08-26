@@ -41,7 +41,7 @@ export class SongService {
     this.file = file;
     this.data = data!;
     const blob = new Blob([data as BlobPart], { type: 'application/json' });
-    saveAs(blob, 'song.json'); // https://stackoverflow.com/questions/51952190/how-can-i-download-file-using-angular-5
+    // saveAs(blob, 'song.json'); // https://stackoverflow.com/questions/51952190/how-can-i-download-file-using-angular-5
   }
 
   getSongList(): Observable<Song[]> {

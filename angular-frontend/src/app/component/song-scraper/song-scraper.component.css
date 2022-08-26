@@ -93,7 +93,7 @@ textarea:focus {
   margin-left: 0.5rem;
   border-radius: 10rem;
   max-width: 5%;
-  font-size: 1.6rem;
+  font-size: 2rem;
   width: 5%;
   cursor: pointer;
   background-color: #212121;
@@ -104,11 +104,11 @@ textarea:focus {
 }
 
 .generate-btn:active {
-  animation: shake 0.25s;
+  animation: shake 0.5s;
 }
 
 .generate-btn:hover {
-  font-size: 1.8rem;
+  font-size: 2.4rem;
   transform: scale(1.0725);
 }
 

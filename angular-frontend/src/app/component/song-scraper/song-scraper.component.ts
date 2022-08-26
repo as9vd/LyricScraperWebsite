@@ -7,6 +7,7 @@ import { ArtistService } from 'src/app/service/artist-service/artist.service';
 import { SongService } from 'src/app/service/song-service/song.service';
 import { DownloadService } from 'src/app/service/download-service/download.service';
 import { Chart } from 'node_modules/chart.js';
+import { saveAs } from 'file-saver';
 
 @Component({
   selector: 'song-scraper',
@@ -52,6 +53,13 @@ export class SongScraperComponent implements OnInit {
         return name ? this._filter(name as string) : this.songList.slice();
       })
     );
+  }
+
+  downloadFile() {
+    const blob = new Blob([this.data as BlobPart], {
+      type: 'application/json',
+    });
+    saveAs(blob, 'song.json'); // https://stackoverflow.com/questions/51952190/how-can-i-download-file-using-angular-5
   }
 
   async onClick() {

@@ -89,6 +89,10 @@ mat-option {
   justify-content: start;
   align-items: center;
   padding: 0.625rem;
+
+  border: none;
+  border-width: 0;
+  border: 0;
 }
 
 .btn:hover {
