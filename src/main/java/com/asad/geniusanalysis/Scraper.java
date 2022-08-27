@@ -172,7 +172,7 @@ public class Scraper {
         }
     }
 
-    public static String createSongJSON(String link, String path) throws IOException, JSONException {
+    public static String createSongJSON(String link) throws IOException, JSONException {
         ArrayList<String> wordsUsed = new ArrayList<>();
         HashMap<String, Integer> wordsUsedCounter = new HashMap<>();
         Document doc = Jsoup.connect(link).userAgent("Chrome").get();
@@ -238,10 +238,10 @@ public class Scraper {
         JSONObject butterflyEffect = new JSONObject().put(title, arr);
         String return_val = "";
 
-        try (PrintWriter out = new PrintWriter(path + "/" + title + ".json")) {
-            out.println(butterflyEffect.toString(2));
+//        try (PrintWriter out = new PrintWriter(path + "/" + title + ".json")) {
+//            out.println(butterflyEffect.toString(2));
             return_val += butterflyEffect.toString(2);
-        }
+//        }
 
         return return_val;
     }
@@ -297,7 +297,7 @@ public class Scraper {
                     continue;
                 }
 
-                createSongJSON(line, "Artists and Songs/" + folderName + "/Songs");
+//                createSongJSON(line, "Artists and Songs/" + folderName + "/Songs");
             }
         } finally {
             it.close();

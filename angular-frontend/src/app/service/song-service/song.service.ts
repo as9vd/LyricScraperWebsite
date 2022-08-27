@@ -9,8 +9,8 @@ import { Song } from 'src/app/common/song/song';
   providedIn: 'root',
 })
 export class SongService {
-  private baseUrl = 'http://localhost:8080';
-  // private baseUrl = 'http://geniusscraper.us-east-2.elasticbeanstalk.com';
+  // private baseUrl = 'http://localhost:8080';
+  private baseUrl = 'http://geniusscraper.us-east-2.elasticbeanstalk.com';
   public songList: Song[] = [];
   public currentPath: string;
   public file: File;

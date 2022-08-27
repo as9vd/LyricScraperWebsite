@@ -21,7 +21,7 @@ public class ListRestController {
         String words;
 
         try {
-            words = Scraper.createSongJSON(geniusUrl, "temp");
+            words = Scraper.createSongJSON(geniusUrl);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

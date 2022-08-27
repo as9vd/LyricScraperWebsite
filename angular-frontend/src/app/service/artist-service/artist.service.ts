@@ -8,8 +8,8 @@ import { map } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class ArtistService {
-  private baseUrl = 'http://localhost:8080/api/artists';
-  // private baseUrl = 'http://geniusscraper.us-east-2.elasticbeanstalk.com';
+  // private baseUrl = 'http://localhost:8080/api/artists';
+  private baseUrl = 'http://geniusscraper.us-east-2.elasticbeanstalk.com';
 
   constructor(@Inject(HttpClient) private httpClient: HttpClient) {}
 

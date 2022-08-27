@@ -13,8 +13,8 @@ export class DownloadService {
     @Inject(SongService) private songService: SongService
   ) {}
 
-  private baseUrl = 'http://localhost:8080';
-  // private baseUrl = 'http://geniusscraper.us-east-2.elasticbeanstalk.com';
+  // private baseUrl = 'http://localhost:8080';
+  private baseUrl = 'http://geniusscraper.us-east-2.elasticbeanstalk.com';
 
   download() {
     return this.songService.file;
