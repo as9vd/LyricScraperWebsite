@@ -11,6 +11,8 @@ import java.io.IOException;
 
 @Component
 public class CorsFilter extends OncePerRequestFilter {
+    // This lets me send API requests in AWS.
+    // Without it, I ran into non-stop CORS errors.
     @Override
     protected void doFilterInternal(final HttpServletRequest request, final HttpServletResponse response,
             final FilterChain filterChain) throws ServletException, IOException {

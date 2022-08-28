@@ -1,18 +1,16 @@
 package com.asad.geniusanalysis.controller;
 
-import com.asad.geniusanalysis.Scraper;
 import com.asad.geniusanalysis.service.DatabaseManager;
-import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.io.File;
-import java.io.IOException;
 
 @Controller
 @CrossOrigin("*")
+// A controller classed used to test functionality.
+// Also initially to load songs into the database.
 public class HomeController {
     @Autowired
     public DatabaseManager databaseManager;

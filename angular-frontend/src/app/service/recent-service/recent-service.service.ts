@@ -13,6 +13,7 @@ export class RecentService {
 
   constructor(@Inject(HttpClient) private httpClient: HttpClient) {}
 
+  // Gets list of recent songs from MySQL database.
   getRecents(): Observable<RecentLink[]> {
     return this.httpClient
       .get<GetRecentLinks>(this.baseUrl + '/api/recentLinks')

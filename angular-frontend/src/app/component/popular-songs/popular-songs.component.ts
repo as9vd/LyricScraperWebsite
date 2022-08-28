@@ -27,6 +27,7 @@ export class PopularSongsComponent implements OnInit {
     @Inject(RecentService) private recentService: RecentService
   ) {}
 
+  // We get recent songs from the API so we can display them on the buttons.
   ngOnInit(): void {
     this.songService.getSongList().subscribe((songs) => {
       this.songList = songs;
@@ -49,6 +50,7 @@ export class PopularSongsComponent implements OnInit {
     );
   }
 
+  // This was necessary for when the mat-autocomplete component was present. Right now, it's not necessary, but in the future, it could be.
   private _filter(name: string): Song[] {
     const filterValue = name.toLowerCase();
 
@@ -57,15 +59,13 @@ export class PopularSongsComponent implements OnInit {
     );
   }
 
+  // Another one filed under mat-autocomplete functionality.
   displaySong(song: Song): string {
     return song.title;
   }
 
+  // Opens the link of the recently parsed song when clicked.
   onClick(link) {
     window.open(link);
-  }
-
-  changeValue(value: any) {
-    console.log(value.link);
   }
 }

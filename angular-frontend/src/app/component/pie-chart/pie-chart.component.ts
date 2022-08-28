@@ -7,6 +7,7 @@ import { SongService } from 'src/app/service/song-service/song.service';
   templateUrl: './pie-chart.component.html',
   styleUrls: ['./pie-chart.component.css'],
 })
+// I am trying to get this to work. Trying to create a pie chart based on the JSON from the song generated.
 export class PieChartComponent implements OnInit {
   chart = [];
   file: File;

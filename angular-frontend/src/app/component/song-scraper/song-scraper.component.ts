@@ -37,6 +37,7 @@ export class SongScraperComponent implements OnInit {
     @Inject(DownloadService) private downloadService: DownloadService
   ) {}
 
+  // Initialises the search bar, gets song data from the API, and helps filter for autocomplete purposes.
   ngOnInit(): void {
     this.songService.getSongList().subscribe((songs) => {
       this.songList = songs;
@@ -55,6 +56,7 @@ export class SongScraperComponent implements OnInit {
     );
   }
 
+  // saveAs function will download the file to the client's computer.
   downloadFile() {
     const blob = new Blob([this.data as BlobPart], {
       type: 'application/json',
@@ -62,6 +64,8 @@ export class SongScraperComponent implements OnInit {
     saveAs(blob, 'song.json'); // https://stackoverflow.com/questions/51952190/how-can-i-download-file-using-angular-5
   }
 
+  // When the generate button (bell) is clicked, we split the link and send a request to the API to generate the JSON.
+  // If it's successful, the JSON data and file fields of this class/component will update.
   async onClick() {
     this.jsonButtonPressed = true;
     try {
@@ -86,6 +90,7 @@ export class SongScraperComponent implements OnInit {
     }
   }
 
+  // Again, for autocomplete purposes. Not needed right now.
   private _filter(name: string): Song[] {
     const filterValue = name.toLowerCase();
 
@@ -94,14 +99,17 @@ export class SongScraperComponent implements OnInit {
     );
   }
 
+  // Click to highlight the entirety of the textarea.
   copyText(event) {
     event.select();
   }
 
+  // Autocomplete purposes.
   displaySong(song: Song): string {
     return song.title;
   }
 
+  // Deprecated function.
   onDownloadClick() {
     this.downloadService.download();
   }

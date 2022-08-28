@@ -24,6 +24,7 @@ export class SongService {
     return this.httpClient.get<Song>(songUrl);
   }
 
+  // Sends a request to the backend to generate the JSON.
   async getSongJSON(link: string) {
     let relevantSnippet = link.split('genius.com/')[1];
 

@@ -7,6 +7,7 @@ import { SongService } from '../song-service/song.service';
 @Injectable({
   providedIn: 'root',
 })
+// This class manages the database. Every 5 songs, we clear out the first-inserted song.
 export class DownloadService {
   constructor(
     @Inject(HttpClient) private httpClient: HttpClient,
